@@ -1,0 +1,19 @@
+# Set Font
+# TODO
+
+input type:keyboard {
+	xkb_layout de,de
+	xkb_numlock enable
+}
+
+# Use Windows and Hyper as a modifier keys
+set $win Mod3
+set $hyper Mod4
+
+bindsym --to-code {
+	#Terminal
+	$hyper+Return exec kitty
+	$win+Return exec kitty
+	$win+Shift+Return exec kitty /bin/bash
+}
+
