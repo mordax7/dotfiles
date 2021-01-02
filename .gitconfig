@@ -1,0 +1,34 @@
+[user]
+    name = Aljaz Gantar
+    email = gantar.aljaz94@gmail.com
+# ---------------------- M E R G E ----------------------
+[merge]
+    tool = intellij
+
+[mergetool "intellij"]
+    cmd = /usr/local/bin/idea merge $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE") $(cd $(dirname "$BASE") && pwd)/$(basename "$BASE") $(cd $(dirname "$MERGED") && pwd)/$(basename "$MERGED")
+    trustExitCode = true
+
+[mergetool]
+    # don't ask if we want to skip merge
+    prompt = false
+    # don't create backup *.orig files
+    keepBackup = false
+
+# ----------------------- D I F F -----------------------
+[diff]
+    guitool = intellij
+[difftool "intellij"]
+    cmd = /usr/local/bin/idea diff $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE")
+[core]
+    autocrlf = input
+    editor = nvim
+
+# ---------------- C R E D E N T I A L S ----------------
+[credential]
+    helper = cache --timeout 28800
+
+# ----------------------- P U L L -----------------------
+[pull]
+    ff = only
+
