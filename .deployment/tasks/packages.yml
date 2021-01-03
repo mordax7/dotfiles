@@ -12,7 +12,7 @@
 
     - name: Manage pacman packages
       pacman:
-        name: "{{ item.key }}"
+        name: "{{ item.0 }}"
         state: "{{ item.value.state | default('latest') }}"
       loop: "{{ pacman|dictsort }}"
 
