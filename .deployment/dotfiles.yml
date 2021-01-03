@@ -3,6 +3,10 @@
   hosts: localhost
   connection: local
   tasks:
+    - name: Gather the package facts
+      package_facts:
+        manager: auto
+
     - include: tasks/packages.yml
       become: true
       tags:
