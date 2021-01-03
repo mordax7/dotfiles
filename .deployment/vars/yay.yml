@@ -32,6 +32,7 @@ pacman:
   kitty:
 
   # files
+  progress:
   udiskie:
 
   # sway
