@@ -3,7 +3,7 @@
   hosts: localhost
   connection: local
   tasks:
-    - name: Gather the package facts
+    - name: Gather package facts
       package_facts:
         manager: auto
 
