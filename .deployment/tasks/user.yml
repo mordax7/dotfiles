@@ -17,7 +17,7 @@
         state: absent
         path: "{{ ansible_env.HOME }}/yay"
 
-  when: "'yay' or 'yay-git' not in ansible_facts.packages"
+  when: "'yay' not in ansible_facts.packages"
   tags:
     - yay
 
