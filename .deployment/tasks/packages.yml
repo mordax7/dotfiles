@@ -4,6 +4,10 @@
   tags:
     - pacman
 
+- name: Install yay
+  aur:
+    name: yay
+
 - block:
     - name: Update/Upgrade pacman
       pacman:
@@ -11,7 +15,8 @@
         upgrade: true
 
     - name: Manage pacman packages
-      pacman:
+      aur:
+        use: yay
         name: "{{ item.0 }}"
         state: "{{ item.value.state | default('latest') }}"
       loop: "{{ pacman|dictsort }}"
