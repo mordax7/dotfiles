@@ -1,6 +1,7 @@
 ---
 pacman:
   # base
+  base:
   linux:
   linux-firmware:
   linux-headers:
