@@ -10,6 +10,7 @@ pacman:
   f2fs-tools:
 
   # base-devel
+  posix:
   sudo:
   autoconf:
   automake:
