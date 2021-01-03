@@ -10,11 +10,32 @@ input type:keyboard {
 set $win Mod3
 set $hyper Mod4
 
+set $mode_system "System exit"
+mode $mode_system {
+    bindsym --to-code {
+        e exec sway-exit exit, mode "default"
+        l exec sway-exit lock, mode "default"
+        s exec sway-exit suspend, mode "default"
+        r exec sway-exit reboot, mode "default"
+        h exec sway-exit shutdown, mode "default"
+
+        # back to normal: Enter or Escape
+        Return mode default
+        Escape mode default
+    }
+}
+
 bindsym --to-code {
 	#Terminal
 	$hyper+Return exec kitty
 	$win+Return exec kitty
 	$win+Shift+Return exec kitty /bin/bash
+
+    # Modes
+    $win+a mode $mode_audio
+    $hyper+r mode $mode_resize
+    $win+e mode $mode_system
+    $win+m mode $mode_workspaces_monitors
 }
 
 # Load systemd integration

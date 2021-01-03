@@ -37,6 +37,7 @@ pacman:
 
   # sway
   sway:
+  swaylock:
   waybar:
 
   # fonts
