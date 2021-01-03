@@ -28,5 +28,7 @@
     scope: user
   loop:
     - "udiskie.service"
+    - "waybar.service"
+    - "waybar-updates.timer"
   tags:
     - systemd
