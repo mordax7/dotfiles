@@ -14,7 +14,7 @@
       pacman:
         name: "{{ item.key }}"
         state: "{{ item.value.state | default('latest') }}"
-      with_dict: "{{pacman}}"
+      loop: "{{pacman}}"
 
   become: true
   when: ansible_os_family == "Archlinux"
