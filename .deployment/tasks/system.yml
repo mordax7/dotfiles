@@ -29,3 +29,5 @@
     state: present
     regexp: "^(.*)Color"
     line: "Color"
+  tags:
+    - pacman
