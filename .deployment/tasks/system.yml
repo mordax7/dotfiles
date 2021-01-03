@@ -1,0 +1,31 @@
+---
+- block:
+    - name: Enable network services
+      systemd:
+        name: {{ item }}
+        enabled: yes
+        with_items:
+          - iwd.service
+          - systemd-networkd.socket
+          - systemd-resolved.service
+
+    - name: Enable iwd built-in network configuration
+      blockinfile:
+        path: /etc/iwd/main.conf
+        create: yes
+        block: |
+          [General]
+          EnableNetworkConfiguration=true
+          RoutePriorityOffset=300
+
+  when: ansible_os_family == "Archlinux"
+  tags:
+    - network
+    - iwd
+
+- name: Colored pacman packages output
+  lineinfile:
+    dest: /etc/pacman.conf
+    state: present
+    regexp: "^(.*)Color"
+    line: "Color"

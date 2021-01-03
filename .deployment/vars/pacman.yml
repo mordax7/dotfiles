@@ -1,0 +1,48 @@
+---
+pacman:
+  # base
+  linux:
+  linux-firmware:
+  linux-headers:
+  logrotate:
+  man-pages:
+  f2fs-tools:
+
+  # base-devel
+  sudo:
+  autoconf:
+  automake:
+  binutils:
+  bison:
+  fakeroot:
+  flex:
+  gcc:
+  groff:
+  m4:
+  make:
+  patch:
+  pkgconf:
+  texinfo:
+  which:
+
+  # terminal
+  fish:
+  kitty:
+
+  # files
+  udiskie:
+
+  # sway
+  sway:
+
+  # network
+  iwd:
+  openssh:
+  wget:
+  rsync:
+  net-tools:
+  nmap:
+
+  # git
+  git:
+  meld:

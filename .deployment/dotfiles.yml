@@ -1,0 +1,23 @@
+---
+- name: Playbook to manage mordax777 dotfiles (https://github.com/mordax777/dotfiles)
+  hosts: localhost
+  connection: local
+  tasks:
+    - include: tasks/packages.yml
+      become: true
+      tags:
+        - packages
+
+    - include: tasks/system.yml
+      become: true
+      tags:
+        - system
+
+    - include: tasks/harden.yml
+      become: true
+      tags:
+        - harden
+
+    - include: tasks/user.yml
+      tags:
+        - user
