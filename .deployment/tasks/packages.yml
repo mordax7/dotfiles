@@ -14,7 +14,7 @@
         use: yay
         name: "{{ item.0 }}"
         state: "{{ item.value.state | default('latest') }}"
-      loop: "{{ pacman|dictsort }}"
+      loop: "{{ yay|dictsort }}"
 
   when: ansible_os_family == "Archlinux"
   tags:
