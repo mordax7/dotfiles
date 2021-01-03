@@ -2,12 +2,12 @@
 - block:
     - name: Enable network services
       systemd:
-        name: {{ item }}
+        name: "{{ item }}"
         enabled: yes
       loop:
-        - iwd.service
-        - systemd-networkd.socket
-        - systemd-resolved.service
+        - "iwd.service"
+        - "systemd-networkd.socket"
+        - "systemd-resolved.service"
 
     - name: Enable iwd built-in network configuration
       blockinfile:
