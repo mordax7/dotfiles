@@ -4,18 +4,18 @@
   tags:
     - yay
 
-- name: Install yay
-  aur:
-    name: yay
-  tags:
-    - yay
+- block:
+    - name: Install yay
+      aur:
+        name: yay
 
-- name: Manage yay packages
-  aur:
-    use: yay
-    name: "{{ item.0 }}"
-    state: "{{ item.value.state | default('latest') }}"
-  loop: "{{ pacman|dictsort }}"
+    - name: Manage packages
+      aur:
+        use: yay
+        name: "{{ item.0 }}"
+        state: "{{ item.value.state | default('latest') }}"
+      loop: "{{ pacman|dictsort }}"
+
   when: ansible_os_family == "Archlinux"
   tags:
     - yay
