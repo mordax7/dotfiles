@@ -21,7 +21,6 @@
         state: "{{ item.value.state | default('latest') }}"
       loop: "{{ pacman|dictsort }}"
 
-  become: true
   when: ansible_os_family == "Archlinux"
   tags:
     - pacman
