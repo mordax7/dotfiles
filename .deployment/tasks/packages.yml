@@ -4,11 +4,6 @@
   tags:
     - pacman
 
-- name: Include python package list
-  include_vars: vars/pip.yml
-  tags:
-    - pip
-
 - block:
     - name: Update/Upgrade pacman
       pacman:
@@ -21,15 +16,7 @@
         state: "{{ item.value.state | default('latest') }}"
       with_dict: "{{pacman}}"
 
-    - name: Manage python packages
-      pip:
-        name: "{{ item.key }}"
-        state: "{{ item.value.state | default('latest') }}"
-        executable: "{{ item.value.executable | default('pip3') }}"
-      with_dict: "{{pip}}"
-
   become: true
   when: ansible_os_family == "Archlinux"
   tags:
     - pacman
-    - pip
