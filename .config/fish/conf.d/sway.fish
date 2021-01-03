@@ -1,5 +1,6 @@
-# Make systemd aware of modified PATH
-systemctl --user import-environment PATH
+for line in (systemctl --user show-environment)
+    set -x $line | sed '0,/\=/{s/\=/ /}'
+end
 
 # Running from tty1 start sway
 set TTY1 (tty)
