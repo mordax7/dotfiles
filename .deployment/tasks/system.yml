@@ -4,10 +4,10 @@
       systemd:
         name: {{ item }}
         enabled: yes
-        loop:
-          - iwd.service
-          - systemd-networkd.socket
-          - systemd-resolved.service
+      loop:
+        - iwd.service
+        - systemd-networkd.socket
+        - systemd-resolved.service
 
     - name: Enable iwd built-in network configuration
       blockinfile:
