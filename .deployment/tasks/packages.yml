@@ -8,18 +8,12 @@
   aur:
     name: yay
 
-- block:
-    - name: Update/Upgrade pacman
-      pacman:
-        update_cache: true
-        upgrade: true
-
-    - name: Manage pacman packages
-      aur:
-        use: yay
-        name: "{{ item.0 }}"
-        state: "{{ item.value.state | default('latest') }}"
-      loop: "{{ pacman|dictsort }}"
+- name: Manage pacman packages
+  aur:
+    use: yay
+    name: "{{ item.0 }}"
+    state: "{{ item.value.state | default('latest') }}"
+  loop: "{{ pacman|dictsort }}"
 
   when: ansible_os_family == "Archlinux"
   tags:
