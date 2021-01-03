@@ -1,20 +1,21 @@
 ---
-- name: Include pacman package list
-  include_vars: vars/pacman.yml
+- name: Include package list
+  include_vars: vars/yay.yml
   tags:
-    - pacman
+    - yay
 
 - name: Install yay
   aur:
     name: yay
+  tags:
+    - yay
 
-- name: Manage pacman packages
+- name: Manage yay packages
   aur:
     use: yay
     name: "{{ item.0 }}"
     state: "{{ item.value.state | default('latest') }}"
   loop: "{{ pacman|dictsort }}"
-
   when: ansible_os_family == "Archlinux"
   tags:
-    - pacman
+    - yay
