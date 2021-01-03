@@ -36,6 +36,22 @@ pacman:
 
   # sway
   sway:
+  waybar:
+
+  # fonts
+  ttf-dejavu:
+  ttf-courier-prime:
+  ttf-heuristica:
+  ttf-liberation:
+  noto-fonts:
+  cantarell-fonts:
+  ttf-droid:
+  ttf-lato:
+  ttf-opensans:
+  ttf-signika:
+  xorg-fonts-misc:
+  otf-font-awesome:
+  ttf-joypixels:
 
   # network
   iwd:
