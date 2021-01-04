@@ -30,11 +30,6 @@ yay:
   # other arch
   pacman-contrib:
 
-  # aur
-  aurpublish:
-  aurutils:
-  rebuild-detector:
-
   # terminal
   fish:
   kitty:
