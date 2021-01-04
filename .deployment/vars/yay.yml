@@ -72,6 +72,9 @@ yay:
   net-tools:
   nmap:
 
+  # security
+  pinentry:
+
   # git
   git:
   meld:
