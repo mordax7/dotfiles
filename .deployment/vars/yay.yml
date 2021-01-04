@@ -92,7 +92,7 @@ yay:
   nmap:
 
   # browsers
-  brave:
+  brave-bin:
   intel-media-driver:
 
   # security
