@@ -37,6 +37,7 @@ yay:
   # files
   progress:
   udiskie:
+  jq:
 
   # sway
   sway:
