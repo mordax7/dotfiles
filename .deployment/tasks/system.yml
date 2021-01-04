@@ -33,3 +33,18 @@
     line: "Color"
   tags:
     - pacman
+
+- name: ensure group "docker" exists
+  group:
+    name: docker
+    state: present
+  tags:
+    - docker
+
+- name: add user {{ ansible_user_id }} to "docker" group
+  user:
+    name: "{{ ansible_user_id }}"
+    groups: docker
+    append: yes
+    tags:
+      - docker
