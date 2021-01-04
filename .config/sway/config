@@ -6,6 +6,11 @@ input type:keyboard {
 	xkb_numlock enable
 }
 
+input type:touchpad {
+    natural_scroll enabled
+    tap enabled
+}
+
 # Use Windows and Hyper as a modifier keys
 set $win Mod3
 set $hyper Mod4
