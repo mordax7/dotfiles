@@ -3,7 +3,7 @@ for line in (systemctl --user show-environment)
     set command (echo $line | sed '0,/\=/{s/\=/ /}')
     set key (echo "$command" | awk '{print $1}')
     set value (echo "$command" | awk '{print $2}')
-    set "$key" "$value"
+    set -x "$key" "$value"
 end
 
 # Running from tty1 start sway
