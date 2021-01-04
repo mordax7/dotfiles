@@ -9,7 +9,6 @@ before_lock() {
     playerctl -a pause
     bluetoothctl disconnect
     reset_kbd
-    sudo systemctl stop pcscd.service
 }
 
 case "$1" in
