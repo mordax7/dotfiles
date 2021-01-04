@@ -107,3 +107,7 @@ yay:
   # git
   git:
   meld:
+
+  # misc
+  fzf:
+  wofi:
