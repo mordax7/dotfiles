@@ -4,6 +4,9 @@
   tags:
     - yay
 
+- name: Import required gpg key
+  shell: curl https://keybase.io/maximbaz/pgp_keys.asc | gpg --import
+
 - block:
     - name: Install yay
       aur:
