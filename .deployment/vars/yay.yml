@@ -34,7 +34,7 @@ yay:
   aurpublish:
   aurutils:
   repoctl:
-  rebuild-detector':
+  rebuild-detector:
 
   # terminal
   fish:
