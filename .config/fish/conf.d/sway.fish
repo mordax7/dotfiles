@@ -1,5 +1,6 @@
 for line in (systemctl --user show-environment)
-    set -x $line | sed '0,/\=/{s/\=/ /}'
+    set a (echo $line | sed '0,/\=/{s/\=/ /}')
+    set -x $a
 end
 
 # Running from tty1 start sway
