@@ -33,7 +33,6 @@ yay:
   # aur
   aurpublish:
   aurutils:
-  repoctl:
   rebuild-detector:
 
   # terminal
