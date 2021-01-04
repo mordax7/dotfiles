@@ -43,6 +43,16 @@ yay:
   swaylock:
   waybar:
 
+  # audio
+  pulseaudio:
+  pulseaudio-alsa:
+  pulseaudio-bluetooth:
+  pamixer:
+  pavucontrol:
+  playerctl:
+  bluez:
+  bluez-utils:
+
   # fonts
   ttf-dejavu:
   ttf-courier-prime:
