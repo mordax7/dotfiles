@@ -50,3 +50,13 @@
     append: yes
   tags:
     - docker
+
+- name: copy pulseaudio configuration
+  copy:
+    src: files/default.pa
+    dest: /etc/pulse/default.pa
+    owner: root
+    group: root
+    mode: 0644
+  tags:
+    - pulseaudio
