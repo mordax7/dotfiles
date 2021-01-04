@@ -95,7 +95,7 @@ yay:
   neovim:
   docker:
   direnv:
-  terraform:
+  tfenv:
 
   # browsers
   brave-bin:
