@@ -27,6 +27,15 @@ yay:
   texinfo:
   which:
 
+  # other arch
+  pacman-contrib:
+
+  # aur
+  aurpublish:
+  aurutils:
+  repoctl:
+  rebuild-detector':
+
   # terminal
   fish:
   kitty:
