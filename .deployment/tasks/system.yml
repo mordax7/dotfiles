@@ -7,7 +7,7 @@
     - "iwd.service"
     - "systemd-networkd.socket"
     - "systemd-resolved.service"
-    - "bluetooth.service.service"
+    - "bluetooth.service"
   tags:
     - network
     - iwd
