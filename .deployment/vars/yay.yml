@@ -43,6 +43,20 @@ yay:
   sway:
   swaylock:
   waybar:
+  xorg-server-xwayland:
+  wl-clipboard:
+  wl-clipboard-manager:
+  python-i3ipc:
+  mako:
+  gtk-theme-arc-gruvbox-git:
+  gammastep:
+  light:
+  slurp:
+  wluma:
+  vulkan-intel:
+  vulkan-headers:
+  flashfocus-git:
+  qt5-wayland:
 
   # audio
   pulseaudio:
