@@ -97,6 +97,10 @@ yay:
   direnv:
   tfenv:
 
+  # kubernetes
+  kubectl:
+  kubectx:
+
   # browsers
   brave-bin:
   intel-media-driver:
