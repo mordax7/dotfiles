@@ -91,6 +91,12 @@ yay:
   net-tools:
   nmap:
 
+  # dev tools
+  neovim:
+  docker:
+  direnv:
+  terraform:
+
   # browsers
   brave-bin:
   intel-media-driver:
