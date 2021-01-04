@@ -8,6 +8,7 @@
     - "systemd-networkd.socket"
     - "systemd-resolved.service"
     - "bluetooth.service"
+    - "docker.socket"
   tags:
     - network
     - iwd
@@ -41,7 +42,7 @@
   tags:
     - docker
 
-- name: add user {{ ansible_user_id }} to "docker" group
+- name: add {{ ansible_user_id }} to "docker" group
   user:
     name: "{{ ansible_user_id }}"
     groups: docker
