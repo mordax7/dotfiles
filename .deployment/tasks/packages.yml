@@ -4,8 +4,10 @@
   tags:
     - yay
 
-- name: Import required gpg key
-  shell: curl https://keybase.io/maximbaz/pgp_keys.asc | gpg --import
+- name: install key from keybase keyserver
+  gpg_key:
+    fpr: EB4F9E5A60D32232BB52150C12C87A28FEAC6B20
+    keyserver: https://keybase.io/maximbaz/pgp_keys.asc
 
 - block:
     - name: Install yay
