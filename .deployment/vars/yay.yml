@@ -91,6 +91,10 @@ yay:
   net-tools:
   nmap:
 
+  # browsers
+  brave:
+  intel-media-driver:
+
   # security
   pinentry:
 
