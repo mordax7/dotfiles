@@ -30,6 +30,14 @@ yay:
   # other arch
   pacman-contrib:
 
+  # hardware
+  dell-command-configure:
+  fwupd:
+  tlp:
+  dmidecode:
+  upower:
+  bolt:
+
   # terminal
   fish:
   kitty:

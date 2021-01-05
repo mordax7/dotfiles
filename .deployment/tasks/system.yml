@@ -9,6 +9,7 @@
     - "systemd-resolved.service"
     - "bluetooth.service"
     - "docker.socket"
+    - "tlp.service"
   tags:
     - network
     - iwd
