@@ -1,0 +1,8 @@
+[Unit]
+Description=Periodic pacman mirrorlist refresh
+
+[Timer]
+OnCalendar=hourly
+
+[Install]
+WantedBy=timers.target

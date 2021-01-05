@@ -1,5 +1,28 @@
 ---
-- name: Enable network services
+- name: copy system level configuration
+  copy:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    owner: root
+    group: root
+    mode: 0644
+    remote_src: yes
+  loop:
+    - { src: 'files/etc/pulse/default.pa', dest: '/etc/pulse/default.pa' }
+    - { src: 'files/etc/bluetooth/main.conf', dest: '/etc/bluetooth/main.conf' }
+    - { src: 'files/etc/systemd/system/reflector.service', dest: '/etc/systemd/system/reflector.service' }
+    - { src: 'files/etc/systemd/system/reflector.timer', dest: '/etc/systemd/system/reflector.timer' }
+    - { src: 'files/etc/iwd/main.conf', dest: '/etc/iwd/main.conf' }
+    - { src: 'files/etc/pacman.conf', dest: '/etc/pacman.conf' }
+  tags:
+    - pulseaudio
+    - bluetooth
+    - reflector
+    - network
+    - iwd
+    - pacman
+
+- name: Enable system services
   systemd:
     name: "{{ item }}"
     enabled: yes
@@ -10,32 +33,14 @@
     - "bluetooth.service"
     - "docker.socket"
     - "tlp.service"
+    - "reflector.timer"
   tags:
     - network
     - iwd
     - bluetooth
     - docker
-
-- name: Enable iwd built-in network configuration
-  blockinfile:
-    path: /etc/iwd/main.conf
-    create: yes
-    block: |
-      [General]
-      EnableNetworkConfiguration=true
-      RoutePriorityOffset=300
-  tags:
-    - network
-    - iwd
-
-- name: Colored pacman packages output
-  lineinfile:
-    dest: /etc/pacman.conf
-    state: present
-    regexp: "^(.*)Color"
-    line: "Color"
-  tags:
-    - pacman
+    - tlp
+    - reflector
 
 - name: ensure group "docker" exists
   group:
@@ -51,18 +56,3 @@
     append: yes
   tags:
     - docker
-
-- name: copy system level configuration
-  copy:
-    src: "{{ item.src }}"
-    dest: "{{ item.dest }}"
-    owner: root
-    group: root
-    mode: 0644
-    remote_src: yes
-  loop:
-    - { src: 'files/etc/pulse/default.pa', dest: '/etc/pulse/default.pa' }
-    - { src: 'files/etc/bluetooth/main.conf', dest: '/etc/bluetooth/main.conf' }
-  tags:
-    - pulseaudio
-    - bluetooth

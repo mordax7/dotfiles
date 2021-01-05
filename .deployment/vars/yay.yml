@@ -29,6 +29,7 @@ yay:
 
   # other arch
   pacman-contrib:
+  reflector:
 
   # hardware
   dell-command-configure:
