@@ -1,0 +1,24 @@
+#!/bin/sh
+
+function vpnstatus {
+    vpn="$(systemctl | awk '
+        $1 ~ /^openvpn-client@/ && $4 ~ /^running$/ {
+            gsub(/^openvpn-client@|\.service$/, "", $1);
+            printf $1;
+        }
+    ')"
+    if [ -n "$vpn" ]; then
+        vpn="$vpn "
+        class=on
+    else
+        vpn=""
+        class=off
+    fi
+    printf '{"text": "%s", "tooltip": "", "class": "%s"}\n' "$vpn" "$class"
+}
+
+vpnstatus
+
+# ip monitor link will print a line whenever the vpn connection is altered.
+# also at other times, but not very often.
+ip monitor link | while read -r line; do vpnstatus; done

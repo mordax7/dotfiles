@@ -63,8 +63,11 @@
         "return-type": "json"
     },
     "custom/vpn": {
+        "format": "{}",
+        "return-type": "json",
         "exec": "waybar-vpn",
-        "return-type": "json"
+        "on-click": "systemctl start openvpn-client@ScandioVPN",
+        "on-click-right": "systemctl stop openvpn-client@ScandioVPN"
     },
     "custom/dnd": {
         "exec": "waybar-dnd",
