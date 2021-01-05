@@ -28,7 +28,7 @@
     name: "{{ item }}"
     enabled: yes
   loop:
-    - "iwd.service"
+#    - "iwd.service"
     - "NetworkManager.service"
     - "bluetooth.service"
     - "docker.socket"
