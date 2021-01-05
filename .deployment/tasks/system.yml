@@ -60,8 +60,8 @@
     mode: 0644
     remote_src: yes
   loop:
-    - { src: 'files/pulse/default.pa', dest: '/etc/pulse/default.pa' }
-    - { src: 'files/bluetooth/main.conf', dest: '/etc/bluetooth/main.conf' }
+    - { src: 'files/etc/pulse/default.pa', dest: '/etc/pulse/default.pa' }
+    - { src: 'files/etc/bluetooth/main.conf', dest: '/etc/bluetooth/main.conf' }
   tags:
     - pulseaudio
     - bluetooth
