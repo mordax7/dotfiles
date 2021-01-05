@@ -8,6 +8,8 @@
     mode: 0644
     remote_src: yes
   loop:
+    - { src: 'files/etc/NetworkManager/conf.d/wifi_backend.conf', dest: '/etc/NetworkManager/conf.d/wifi_backend.conf' }
+    - { src: 'files/etc/systemd/system/iwd.service.d/90-networkmanager.conf', dest: '/etc/systemd/system/iwd.service.d/90-networkmanager.conf' }
     - { src: 'files/etc/pulse/default.pa', dest: '/etc/pulse/default.pa' }
     - { src: 'files/etc/bluetooth/main.conf', dest: '/etc/bluetooth/main.conf' }
     - { src: 'files/etc/systemd/system/reflector.service', dest: '/etc/systemd/system/reflector.service' }
