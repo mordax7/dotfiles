@@ -53,8 +53,8 @@
 
 - name: copy system level configuration
   copy:
-    src: {{ item.src }}
-    dest: {{ item.dest }}
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
     owner: root
     group: root
     mode: 0644
