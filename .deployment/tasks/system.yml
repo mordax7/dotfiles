@@ -51,12 +51,16 @@
   tags:
     - docker
 
-- name: copy pulseaudio configuration
+- name: copy system level configuration
   copy:
-    src: files/default.pa
-    dest: /etc/pulse/default.pa
+    src: {{ item.src }}
+    dest: {{ item.dest }}
     owner: root
     group: root
     mode: 0644
+  loop:
+    - { src: 'files/pulse/default.pa', dest: '/etc/pulse/default.pa' }
+    - { src: 'files/bluetooth/main.conf', dest: '/etc/bluetooth/main.conf' }
   tags:
     - pulseaudio
+    - bluetooth
