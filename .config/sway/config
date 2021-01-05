@@ -156,6 +156,7 @@ bindsym --to-code {
     Print        exec sway-screenshot-area
     $hyper+Print exec sway-gif-area
     $win+Print   exec sway-screenshare
+    $hyper+n fullscreen disable, exec "pgrep -x dmenu && pkill dmenu || networkmanager_dmenu"
 
     # Kill focused window
     $win+q kill

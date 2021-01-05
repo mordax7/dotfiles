@@ -12,9 +12,6 @@
     - { src: 'files/etc/bluetooth/main.conf', dest: '/etc/bluetooth/main.conf' }
     - { src: 'files/etc/systemd/system/reflector.service', dest: '/etc/systemd/system/reflector.service' }
     - { src: 'files/etc/systemd/system/reflector.timer', dest: '/etc/systemd/system/reflector.timer' }
-    - { src: 'files/etc/systemd/network/20-wireless.network', dest: '/etc/systemd/system/20-wireless.network' }
-    - { src: 'files/etc/systemd/network/50-wired.network', dest: '/etc/systemd/system/50-wired.network' }
-#    - { src: 'files/etc/iwd/main.conf', dest: '/etc/iwd/main.conf' }
     - { src: 'files/etc/pacman.conf', dest: '/etc/pacman.conf' }
   tags:
     - pulseaudio
@@ -30,8 +27,7 @@
     enabled: yes
   loop:
     - "iwd.service"
-    - "systemd-networkd.socket"
-    - "systemd-resolved.service"
+    - "NetworkManager.service"
     - "bluetooth.service"
     - "docker.socket"
     - "tlp.service"

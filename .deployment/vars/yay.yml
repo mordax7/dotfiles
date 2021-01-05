@@ -94,6 +94,9 @@ yay:
   ttf-joypixels:
 
   # network
+  networkmanager:
+  networkmanager-openvpn:
+  networkmanager-dmenu-git:
   iwd:
   openssh:
   wget:
