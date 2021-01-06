@@ -79,6 +79,11 @@ yay:
   bluez:
   bluez-utils:
 
+  # video
+  mpv:
+  mpv-mpris:
+  ffmpeg:
+
   # fonts
   ttf-dejavu:
   ttf-courier-prime:
