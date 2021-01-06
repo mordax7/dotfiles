@@ -9,5 +9,6 @@
     - "waybar.service"
     - "waybar-updates.timer"
     - "sway-inactive-window-transparency.service"
+    - "wlsunset.service"
   tags:
     - systemd
