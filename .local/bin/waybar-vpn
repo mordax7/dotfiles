@@ -2,7 +2,7 @@
 
 vpnstatus() {
     check_vpn_status=$(nmcli con show --active | grep vpn)
-    if [ -z "$check_vpn_status" ]; then
+    if [ -n "$check_vpn_status" ]; then
         icon=''
         class=on
     else
