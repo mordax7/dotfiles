@@ -111,6 +111,14 @@ yay:
   direnv:
   tfenv:
 
+  # screenshots & gifs & desktop sharing
+  grim:
+  swappy:
+  wf-recorder:
+  v4l2loopback-dkms:
+  xdg-desktop-portal-wlr:
+  libpipewire02:
+
   # kubernetes
   kubectl:
   kubectx:
