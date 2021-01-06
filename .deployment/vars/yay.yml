@@ -98,7 +98,6 @@ yay:
   networkmanager:
   networkmanager-openvpn:
   networkmanager-dmenu-git:
-  iwd:
   openssh:
   wget:
   rsync:
