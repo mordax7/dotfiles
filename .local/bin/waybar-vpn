@@ -1,20 +1,15 @@
 #!/bin/sh
 
-function vpnstatus {
-    vpn="$(systemctl | awk '
-        $1 ~ /^openvpn-client@/ && $4 ~ /^running$/ {
-            gsub(/^openvpn-client@|\.service$/, "", $1);
-            printf $1;
-        }
-    ')"
-    if [ -n "$vpn" ]; then
-        vpn="$vpn "
+vpnstatus() {
+    check_vpn_status=$(nmcli con show --active | grep vpn)
+    if [ -z "$check_vpn_status" ]; then
+        icon=''
         class=on
     else
-        vpn=""
+        icon=''
         class=off
     fi
-    printf '{"text": "%s", "tooltip": "", "class": "%s"}\n' "$vpn" "$class"
+    printf '{"text": " %s ", "class": "%s"}\n' "$icon" "$class"
 }
 
 vpnstatus

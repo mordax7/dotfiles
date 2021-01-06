@@ -66,8 +66,8 @@
         "format": "{}",
         "return-type": "json",
         "exec": "waybar-vpn",
-        "on-click": "systemctl start openvpn-client@ScandioVPN",
-        "on-click-right": "systemctl stop openvpn-client@ScandioVPN"
+        "on-click": "nmcli con up office passwd-file /run/media/aljaz/wrk-stick/work/vpn/office/pass",
+        "on-click-right": "nmcli con down office"
     },
     "custom/dnd": {
         "exec": "waybar-dnd",
