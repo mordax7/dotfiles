@@ -13,6 +13,8 @@
     - { src: 'files/etc/systemd/system/reflector.service', dest: '/etc/systemd/system/reflector.service' }
     - { src: 'files/etc/systemd/system/reflector.timer', dest: '/etc/systemd/system/reflector.timer' }
     - { src: 'files/etc/pacman.conf', dest: '/etc/pacman.conf' }
+    - { src: 'files/etc/modprobe.d/v4l2loopback.conf', dest: '/etc/modprobe.d/v4l2loopback.conf' }
+    - { src: 'files/etc/modules-load.d/v4l2loopback.conf', dest: '/etc/modules-load.d/v4l2loopback.conf' }
   tags:
     - pulseaudio
     - bluetooth
