@@ -8,5 +8,6 @@
     - "udiskie.service"
     - "waybar.service"
     - "waybar-updates.timer"
+    - "sway-inactive-window-transparency.service"
   tags:
     - systemd
