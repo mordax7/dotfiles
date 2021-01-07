@@ -44,6 +44,9 @@ yay:
   fish:
   kitty:
 
+  # passwords
+  gopass:
+
   # files
   ranger:
   progress:
@@ -98,6 +101,9 @@ yay:
   mpv-mpris:
   ffmpeg:
 
+  # music
+  spotify:
+
   # fonts
   ttf-dejavu:
   ttf-courier-prime:
@@ -129,6 +135,25 @@ yay:
   docker:
   direnv:
   tfenv:
+  intellij-idea-ultimate-edition:
+
+  # go dev
+  go:
+
+  # python dev
+  python-pip:
+  python-pipenv:
+  python-poetry:
+
+  # ruby dev
+  rbenv:
+
+  # node dev
+  nodejs:
+  npm:
+
+  # java dev
+  jdk11-openjdk:
 
   # screenshots & gifs & desktop sharing
   grim:
