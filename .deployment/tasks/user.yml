@@ -33,4 +33,4 @@
 - name: Configuring YubiKey for passwordless sudo (touch it now)
   command: "pamu2fcfg -umaximbaz > {{ ansible_user_dir }}/.config/Yubico/u2f_keys"
   args:
-    creates: "{{ ansible_user_dir }}/.config/Yubico/u2f_keys"
+    creates: "{{ ansible_user_dir }}/.config/Yubico"
