@@ -35,7 +35,6 @@
     - "docker.socket"
     - "tlp.service"
     - "reflector.timer"
-    - "yubikey-touch-detector.socket"
   tags:
     - network
     - iwd

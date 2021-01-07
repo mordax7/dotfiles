@@ -10,5 +10,6 @@
     - "waybar-updates.timer"
     - "sway-inactive-window-transparency.service"
     - "wlsunset.service"
+    - "yubikey-touch-detector.socket"
   tags:
     - systemd
