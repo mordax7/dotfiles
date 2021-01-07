@@ -123,6 +123,7 @@ yay:
   networkmanager:
   networkmanager-openvpn:
   networkmanager-dmenu-git:
+  openbsd-netcat:
   openssh:
   wget:
   rsync:
