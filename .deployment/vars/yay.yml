@@ -45,6 +45,8 @@ yay:
   kitty:
 
   # files
+  ranger:
+  atool:
   progress:
   udiskie:
   fd:
