@@ -11,5 +11,6 @@
     - "sway-inactive-window-transparency.service"
     - "wlsunset.service"
     - "yubikey-touch-detector.socket"
+    - "polkit-gnome.service"
   tags:
     - systemd
