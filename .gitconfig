@@ -1,6 +1,8 @@
+# ----------------------- U S E R -----------------------
 [user]
     name = Aljaz Gantar
     email = gantar.aljaz94@gmail.com
+
 # ---------------------- M E R G E ----------------------
 [merge]
     tool = intellij
