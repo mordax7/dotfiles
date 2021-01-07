@@ -24,13 +24,7 @@
     group: "{{ ansible_user_gid }}"
   become: true
 
-- name: Create the Yubico directory if it does not exist
-  file:
-    path: "{{ ansible_user_dir }}/.config/Yubico"
-    state: directory
-    mode: '0755'
-
 - name: Configuring YubiKey for passwordless sudo (touch it now)
-  command: "pamu2fcfg -umaximbaz > {{ ansible_user_dir }}/.config/Yubico/u2f_keys"
+  command: "mkdir {{ ansible_user_dir }}/.config/Yubico && pamu2fcfg -umaximbaz > {{ ansible_user_dir }}/.config/Yubico/u2f_keys"
   args:
     creates: "{{ ansible_user_dir }}/.config/Yubico"
