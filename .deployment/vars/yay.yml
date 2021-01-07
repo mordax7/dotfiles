@@ -173,6 +173,8 @@ yay:
 
   # security
   pinentry:
+  yubikey-touch-detector:
+  polkit-gnome:
 
   # git
   git:
