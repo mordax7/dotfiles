@@ -23,6 +23,16 @@
     owner: "{{ ansible_user_id }}"
     group: "{{ ansible_user_gid }}"
   become: true
+  tags:
+    - idea
+
+- name: Install personal key and set trust level 5
+  gpg_key:
+    fpr: 7E2A21F965AD08B06B6924881C64943243A3151D
+    keyserver: keys.openpgp.org
+    trust: '5'
+  tags:
+    - gpg
 
 - name: Configuring YubiKey for passwordless sudo (touch it now)
   command: "mkdir {{ ansible_user_dir }}/.config/Yubico && pamu2fcfg -umaximbaz > {{ ansible_user_dir }}/.config/Yubico/u2f_keys"
