@@ -52,3 +52,17 @@
   when: not yubico_key_status.stat.exists
   tags:
     - yubico
+
+- name: Check if office VPN is present
+  stat:
+    path: "/etc/NetworkManager/system-connections/office.nmconnection"
+  become: true
+  register: office_vpn_status
+  tags:
+    - vpn
+
+- name: Import the Office VPN settings if it dont exists yet
+  shell: "nmcli connection import type openvpn file /run/media/aljaz/wrk-stick/work/vpn/office/office.ovpn"
+  when: not office_vpn_status.stat.exists
+  tags:
+    - vpn
