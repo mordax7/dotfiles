@@ -1,0 +1,11 @@
+autoclip: false
+autoimport: true
+cliptimeout: 45
+exportkeys: true
+mime: true
+nocolor: false
+nopager: false
+notifications: true
+path: /home/aljaz/.local/share/gopass/stores/root
+safecontent: false
+mounts: {}
