@@ -85,7 +85,9 @@ mode $mode_audio {
     bindsym --to-code {
         s            exec pacmd set-sink-port alsa_output.pci-0000_00_1f.3.analog-stereo analog-output-speaker, mode "default"
         h            exec pacmd set-sink-port alsa_output.pci-0000_00_1f.3.analog-stereo analog-output-headphones, mode "default"
-        b            exec "bluetoothctl disconnect 20:74:CF:5C:1F:68; bluetoothctl connect 20:74:CF:5C:1F:68", mode "default"
+        r            exec pacmd set-default-sink alsa_output.usb-Razer_Razer_Kraken_7.1_V2_00000000-00.analog-stereo, mode "default"
+        c            exec pacmd set-default-sink alsa_output.pci-0000_00_1f.3.analog-stereo, mode "default"
+        b            exec "bluetoothctl disconnect 70:26:05:3C:56:A7; bluetoothctl connect 70:26:05:3C:56:A7", mode "default"
         Shift+i      exec pacmd set-source-port alsa_input.pci-0000_00_1f.3.analog-stereo analog-input-internal-mic, mode "default"
         Shift+h      exec pacmd set-source-port alsa_input.pci-0000_00_1f.3.analog-stereo analog-input-headset-mic, mode "default"
         Shift+m      exec pacmd set-source-port alsa_input.pci-0000_00_1f.3.analog-stereo analog-input-mic, mode "default"
