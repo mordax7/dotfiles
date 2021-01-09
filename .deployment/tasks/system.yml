@@ -22,7 +22,6 @@
     - bluetooth
     - reflector
     - network
-    - iwd
     - pacman
 
 - name: Enable system services
@@ -37,7 +36,6 @@
     - "reflector.timer"
   tags:
     - network
-    - iwd
     - bluetooth
     - docker
     - tlp
