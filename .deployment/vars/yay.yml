@@ -54,6 +54,7 @@ yay:
   fd:
   jq:
   yadm:
+  udiskie-dmenu-git:
 
   # archiving
   atool:
