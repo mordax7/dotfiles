@@ -13,6 +13,7 @@
     - "yubikey-touch-detector.socket"
     - "polkit-gnome.service"
     - "wl-clipboard-manager.service"
+    - "sway-autoname-workspaces.service"
   tags:
     - systemd
 
