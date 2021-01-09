@@ -188,7 +188,7 @@ bindsym --to-code {
     $hyper+s split toggle
 
     # Focus the parent container
-    $hyper+u focus parent
+    $hyper+c focus parent
 
     # Focus the child container
     $hyper+i focus child
