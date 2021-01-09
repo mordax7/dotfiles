@@ -149,7 +149,7 @@ bindsym --to-code {
     $win+Shift+Return exec kitty --config NONE /bin/bash
 
     # Launcher
-    $hyper+equal exec bash -c "echo 'enter expression to calculate' | dmenu -p "calc" | xargs -r qalc -t | tee >(wl-copy) >(xargs -I{} notify-send 'calc result' '{}')"
+    $hyper+0 exec bash -c "echo 'enter expression to calculate' | dmenu -p "calc" | xargs -r qalc -t | tee >(wl-copy) >(xargs -I{} notify-send 'calc result' '{}')"
     $hyper+d     fullscreen disable, exec wofi
     $hyper+p     fullscreen disable, exec "wl-clipboard-manager lock; passmenu -p pass; wl-clipboard-manager unlock"
     $hyper+m     fullscreen disable, exec udiskie-dmenu
