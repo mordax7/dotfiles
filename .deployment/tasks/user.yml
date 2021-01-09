@@ -12,6 +12,7 @@
     - "wlsunset.service"
     - "yubikey-touch-detector.socket"
     - "polkit-gnome.service"
+    - "wl-clipboard-manager.service"
   tags:
     - systemd
 
