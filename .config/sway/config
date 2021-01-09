@@ -151,7 +151,8 @@ bindsym --to-code {
     # Launcher
     $hyper+0 exec bash -c "echo 'enter expression to calculate' | dmenu -p "calc" | xargs -r qalc -t | tee >(wl-copy) >(xargs -I{} notify-send 'calc result' '{}')"
     $hyper+d     fullscreen disable, exec wofi
-    $hyper+p     fullscreen disable, exec "wl-clipboard-manager lock; passmenu -p pass; wl-clipboard-manager unlock"
+    $hyper+p     fullscreen disable, exec "wl-clipboard-manager lock; gopass ls --flat | wofi --dmenu | xargs --no-run-if-empty gopass show -c; wl-clipboard-manager unlock"
+    $hyper+u     fullscreen disable, exec "wl-clipboard-manager lock; gopass ls --flat | wofi --dmenu | xargs -I _ --no-run-if-empty gopass show -c _ username; wl-clipboard-manager unlock"
     $hyper+m     fullscreen disable, exec udiskie-dmenu
     $win+grave   fullscreen disable, exec wl-clipboard-manager dmenu
     Print        exec sway-screenshot-area
