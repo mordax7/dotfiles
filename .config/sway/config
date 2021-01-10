@@ -3,6 +3,7 @@ font pango: Taskbar, Cantarell 9
 
 input type:keyboard {
 	xkb_layout de-hyper,de
+	xkb_variant ,nodeadkeys
 	xkb_numlock enable
 }
 
