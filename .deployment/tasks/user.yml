@@ -25,6 +25,11 @@
   tags:
     - gpg
 
+- name: Install office key and set trust level 5
+  gpg_key:
+    file: "/run/media/aljaz/wrk-stick/work/gpg/office.gpg"
+    trust: '5'
+
 - name: Creates Yubico dotfiles directory
   file:
     path: "{{ ansible_user_dir }}/.config/Yubico"
