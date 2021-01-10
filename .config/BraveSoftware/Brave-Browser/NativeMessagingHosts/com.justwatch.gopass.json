@@ -1,0 +1,9 @@
+{
+    "name": "com.justwatch.gopass",
+    "description": "Gopass wrapper to search and return passwords",
+    "path": "/home/aljaz/.local/bin/gopass-wrapper",
+    "type": "stdio",
+    "allowed_origins": [
+        "chrome-extension://kkhfnlkhiapbiehimabddjbimfaijdhk/"
+    ]
+}
