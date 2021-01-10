@@ -17,6 +17,7 @@
     - { src: 'files/etc/modules-load.d/v4l2loopback.conf', dest: '/etc/modules-load.d/v4l2loopback.conf' }
     - { src: 'files/etc/pam.d/polkit-1', dest: '/etc/pam.d/polkit-1' }
     - { src: 'files/etc/pam.d/sudo', dest: '/etc/pam.d/sudo' }
+    - { src: 'files/usr/lib/udev/rules.d/60-net.rules', dest: '/usr/lib/udev/rules.d/60-net.rules' }
   tags:
     - pulseaudio
     - bluetooth
