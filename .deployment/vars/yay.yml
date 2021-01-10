@@ -175,6 +175,8 @@ yay:
 
   # security
   pinentry:
+  ccid:
+  gcr:
   pam-u2f:
   yubikey-touch-detector:
   polkit-gnome:
