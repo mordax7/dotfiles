@@ -184,6 +184,7 @@ yay:
   meld:
 
   # misc
+  dmenu-term:
   fzf:
   wofi:
   libqalculate:
