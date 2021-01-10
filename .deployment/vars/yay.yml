@@ -43,6 +43,9 @@ yay:
   # terminal
   fish:
   kitty:
+  bat:
+  ncdu:
+  lsd:
 
   # passwords
   gopass:
