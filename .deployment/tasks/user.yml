@@ -17,16 +17,6 @@
   tags:
     - systemd
 
-- name: Recursively change ownership of the Intellij directory
-  file:
-    path: /opt/intellij-idea-ultimate-edition
-    state: directory
-    recurse: yes
-    owner: "{{ ansible_user_id }}"
-  become: true
-  tags:
-    - idea
-
 - name: Install personal key and set trust level 5
   gpg_key:
     fpr: 7E2A21F965AD08B06B6924881C64943243A3151D

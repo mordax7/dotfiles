@@ -18,3 +18,13 @@
   loop: "{{ yay|dictsort }}"
   tags:
     - yay
+
+- name: Recursively change ownership of the Intellij directory
+  file:
+    path: /opt/intellij-idea-ultimate-edition
+    state: directory
+    recurse: yes
+    owner: "{{ ansible_user_id }}"
+  become: true
+  tags:
+    - idea
