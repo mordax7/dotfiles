@@ -1,2 +1,1 @@
 SUBSYSTEM=="net", ACTION=="add", DRIVERS=="?*", ATTR{address}=="98:8d:46:9e:4f:5d", ATTR{type}=="1", KERNEL=="*", NAME="wlan0"
-
