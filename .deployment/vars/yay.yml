@@ -179,6 +179,8 @@ yay:
   gcr:
   pam-u2f:
   yubikey-touch-detector:
+  yubikey-personalization:
+  hopenpgp-tools:
   polkit-gnome:
 
   # git
