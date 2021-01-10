@@ -49,7 +49,7 @@ set $workspace0 workspace number 10
 for_window    [app_id=".*"]                              sticky enable
 for_window    [window_role="pop-up"]                     floating enable
 for_window    [app_id="udiskie"]                         floating enable
-for_window    [instance="signal"]                        floating enable
+for_window    [instance="signal"]                        floating enable, resize set width 60ppt height 80ppt
 for_window    [instance="jami-gnome"]                    floating enable
 for_window    [app_id="telegramdesktop"]                 floating enable
 for_window    [class="Brave-browser"]                    move container to $workspace2, title_format "Brave"
