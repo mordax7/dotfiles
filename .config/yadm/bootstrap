@@ -1,1 +1,11 @@
-# init
+#!/bin/sh
+
+# Install all requirements
+sudo pacman --noconfirm -S ansible posix sudo autoconf automake binutils bison fakeroot flex gcc groff m4 make patch pkgconf texinfo which
+
+# Install ansible modules
+git clone https://github.com/kewlfft/ansible-aur.git ~/.ansible/plugins/modules/aur
+git clone https://github.com/netson/ansible-gpg-key.git ~/.ansible/plugins/modules/gpg_key
+
+# Execute base install
+ansible-playbook ~/.deployment/dotfiles.yml --ask-become-pass --tags packages,system
