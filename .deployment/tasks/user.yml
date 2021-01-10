@@ -29,6 +29,8 @@
   gpg_key:
     file: "/run/media/aljaz/wrk-stick/work/gpg/office.gpg"
     trust: '5'
+  tags:
+    - gpg
 
 - name: Creates Yubico dotfiles directory
   file:
