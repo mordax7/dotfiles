@@ -10,6 +10,7 @@ input type:keyboard {
 input type:touchpad {
     natural_scroll enabled
     tap enabled
+    dwt enabled
 }
 
 seat * hide_cursor 10000
