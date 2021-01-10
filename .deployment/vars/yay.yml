@@ -138,6 +138,7 @@ yay:
   direnv:
   tfenv:
   intellij-idea-ultimate-edition:
+  intellij-idea-ultimate-edition-jre:
 
   # go dev
   go:
