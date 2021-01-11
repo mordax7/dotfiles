@@ -46,6 +46,7 @@ yay:
   bat:
   ncdu:
   lsd:
+  starship-bin:
 
   # passwords
   gopass:
