@@ -8,4 +8,6 @@ nopager: false
 notifications: false
 path: /home/aljaz/.local/share/gopass/stores/root
 safecontent: false
-mounts: {}
+mounts:
+  lando-gopass: /home/aljaz/.local/share/gopass/stores/lando-gopass
+  lando-stack-gopass: /home/aljaz/.local/share/gopass/stores/lando-stack-gopass
