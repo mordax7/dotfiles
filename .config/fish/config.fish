@@ -4,6 +4,9 @@ fish_hybrid_key_bindings
 # Enable direnv
 eval (direnv hook fish)
 
+# Enable starship
+starship init fish | source
+
 # https://github.com/junegunn/fzf#layout
 set -x FZF_DEFAULT_OPTS '--height 40% --layout=reverse --border'
 # https://github.com/junegunn/fzf#respecting-gitignore
