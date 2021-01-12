@@ -49,9 +49,9 @@ set $workspace0 workspace number 10
 for_window    [app_id=".*"]                                     sticky enable
 for_window    [window_role="pop-up"]                            floating enable
 for_window    [app_id="udiskie"]                                floating enable
-for_window    [instance="signal"]                               floating enable, resize set width 60ppt height 80ppt
-for_window    [instance="jami-gnome"]                           floating enable
-for_window    [app_id="telegramdesktop"]                        floating enable
+for_window    [instance="signal"]                               move to scratchpad, resize set width 60ppt height 80ppt
+for_window    [instance="jami-gnome"]                           move to scratchpad, resize set width 60ppt height 80ppt
+for_window    [app_id="telegramdesktop"]                        move to scratchpad, resize set width 60ppt height 80ppt
 for_window    [class="Brave-browser"]                           move container to $workspace2, title_format "Brave"
 for_window    [class="jetbrains-idea"]                          move container to $workspace3, title_format "Idea"
 for_window    [app_id="kitty"]                                  move container to $workspace4, title_format "Kitty"
@@ -202,10 +202,10 @@ bindsym --to-code {
     $win+space floating toggle
 
     # Make the currently focused window a scratchpad
-    $win+minus move scratchpad
+    $win+period move scratchpad
 
     # Show the first scratchpad window
-    $hyper+minus scratchpad show
+    $hyper+period scratchpad show
 
     # Change focus between tiling / floating windows
     $hyper+space focus mode_toggle
