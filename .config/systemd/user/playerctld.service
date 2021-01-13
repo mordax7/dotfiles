@@ -1,0 +1,10 @@
+[Unit]
+Description=Gnome polkit agent
+PartOf=graphical-session.target
+After=graphical-session.target
+
+[Service]
+ExecStart=/usr/bin/playerctld
+
+[Install]
+WantedBy=graphical-session.target
