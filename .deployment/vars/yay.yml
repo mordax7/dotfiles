@@ -59,6 +59,7 @@ yay:
   jq:
   yadm:
   udiskie-dmenu-git:
+  zathura-pdf-mupdf:
 
   # archiving
   atool:
