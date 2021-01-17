@@ -1,6 +1,6 @@
 for line in (systemctl --user show-environment)
-    set key (echo "$line" | cut -d ';' -f 1)
-    set value (echo "$line" | cut -d ';' -f 2-)
+    set key (echo "$line" | cut -d '=' -f 1)
+    set value (echo "$line" | cut -d '=' -f 2-)
     set -x "$key" "$value"
 end
 
