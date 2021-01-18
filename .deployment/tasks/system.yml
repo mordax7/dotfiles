@@ -18,6 +18,7 @@
     - { src: 'files/etc/pam.d/polkit-1', dest: '/etc/pam.d/polkit-1' }
     - { src: 'files/etc/pam.d/sudo', dest: '/etc/pam.d/sudo' }
     - { src: 'files/usr/lib/udev/rules.d/60-net.rules', dest: '/usr/lib/udev/rules.d/60-net.rules' }
+    - { src: 'files/usr/applications/Zoom.desktop', dest: '/usr/applications/Zoom.desktop' }
   tags:
     - pulseaudio
     - bluetooth
