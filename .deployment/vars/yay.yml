@@ -156,7 +156,6 @@ yay:
 
   # ruby dev
   ruby:
-  rubygem:
 
   # node dev
   nodejs:
