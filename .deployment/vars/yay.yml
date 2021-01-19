@@ -144,6 +144,7 @@ yay:
   direnv:
   tfenv:
   intellij-idea-ultimate-edition:
+  python-pre-commit:
 
   # go dev
   go:
@@ -154,7 +155,8 @@ yay:
   python-poetry:
 
   # ruby dev
-  rbenv:
+  ruby:
+  rubygem:
 
   # node dev
   nodejs:
