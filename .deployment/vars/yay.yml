@@ -189,6 +189,7 @@ yay:
   yubikey-personalization:
   hopenpgp-tools:
   polkit-gnome:
+  aws-mfa:
 
   # git
   git:
