@@ -149,6 +149,9 @@ yay:
   # go dev
   go:
 
+  # aws dev
+  aws-cli:
+
   # python dev
   python-pip:
   python-pipenv:
