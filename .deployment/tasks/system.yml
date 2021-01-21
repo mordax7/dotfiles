@@ -37,6 +37,7 @@
     - "docker.socket"
     - "tlp.service"
     - "reflector.timer"
+    - "pcscd.service"
   tags:
     - network
     - bluetooth
