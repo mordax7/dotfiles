@@ -159,7 +159,7 @@ bindsym --to-code {
     $hyper+d     fullscreen disable, exec wofi
     $hyper+p     fullscreen disable, exec "wl-clipboard-manager lock; gopass ls --flat | wofi --dmenu | xargs --no-run-if-empty gopass show -c; wl-clipboard-manager unlock"
     $hyper+u     fullscreen disable, exec "wl-clipboard-manager lock; gopass ls --flat | wofi --dmenu | xargs -I _ --no-run-if-empty gopass show -c _ username; wl-clipboard-manager unlock"
-    $hyper+a     fullscreen disable, exec "wl-clipboard-manager lock; ykman oath list | wofi --dmenu | xargs -I  _ --no-run-if-empty ykman oath code -s _ | wl-copy; wl-clipboard-manager unlock"
+    $hyper+a     fullscreen disable, exec "wl-clipboard-manager lock; ykman oath list | wofi --dmenu | xargs --no-run-if-empty ykman oath code -s | wl-copy; wl-clipboard-manager unlock"
     $hyper+m     fullscreen disable, exec udiskie-dmenu
     $win+grave   fullscreen disable, exec wl-clipboard-manager dmenu
     Print        exec sway-screenshot-area
