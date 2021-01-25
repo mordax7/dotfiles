@@ -170,7 +170,6 @@ yay:
 
   # ansible dev
   ansible:
-  molecule-docker:
 
   # screenshots & gifs & desktop sharing
   grim:
