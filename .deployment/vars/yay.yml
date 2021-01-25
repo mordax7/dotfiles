@@ -168,6 +168,10 @@ yay:
   # java dev
   jdk11-openjdk:
 
+  # ansible dev
+  ansible:
+  molecule-docker:
+
   # screenshots & gifs & desktop sharing
   grim:
   swappy:
