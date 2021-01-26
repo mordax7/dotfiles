@@ -147,6 +147,7 @@ yay:
   intellij-idea-ultimate-edition:
   python-pre-commit:
   plantuml:
+  graphviz:
 
   # go dev
   go:
