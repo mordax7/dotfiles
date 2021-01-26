@@ -146,6 +146,7 @@ yay:
   tfenv:
   intellij-idea-ultimate-edition:
   python-pre-commit:
+  plantuml:
 
   # go dev
   go:
