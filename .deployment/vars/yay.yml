@@ -148,6 +148,7 @@ yay:
   python-pre-commit:
   plantuml:
   graphviz:
+  bosh-cli:
 
   # go dev
   go:
