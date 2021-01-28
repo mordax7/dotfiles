@@ -211,7 +211,7 @@ yay:
   dmenu-term:
   fzf:
   wofi:
-  libqalculate:
+  qalculate-gtk:
   libreoffice-fresh:
   signal-desktop:
   telegram-desktop:

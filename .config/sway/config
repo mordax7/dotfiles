@@ -60,6 +60,7 @@ for_window    [title="meet.google.com is sharing your screen."] floating enable
 for_window    [app_id="dmenu.*"]                                floating enable, resize set width 60ppt height 80ppt
 for_window    [app_id="dmenu-browser"]                          resize set height 20ppt
 for_window    [app_id="dmenu-calc"]                             resize set width 40ppt height 30ppt
+for_window    [app_id="qalculate-gtk"]                          floating enable
 
 # Color scheme (Gruvbox dark)
 set $color_normal_white  #a89984
@@ -155,17 +156,17 @@ bindsym --to-code {
     $win+Shift+Return exec kitty --config NONE /bin/bash
 
     # Launcher
-    $hyper+plus exec bash -c "echo 'enter expression to calculate' | dmenu -p "calc" | xargs -r qalc -t | tee >(wl-copy) >(xargs -I{} notify-send 'calc result' '{}')"
-    $hyper+d     fullscreen disable, exec wofi
-    $hyper+p     fullscreen disable, exec "wl-clipboard-manager lock; gopass ls --flat | wofi --dmenu | xargs --no-run-if-empty gopass show -c; wl-clipboard-manager unlock"
-    $hyper+u     fullscreen disable, exec "wl-clipboard-manager lock; gopass ls --flat | wofi --dmenu | xargs -I _ --no-run-if-empty gopass show -c _ username; wl-clipboard-manager unlock"
-    $hyper+a     fullscreen disable, exec "wl-clipboard-manager lock; ykman oath list | wofi --dmenu | xargs -I _ --no-run-if-empty ykman oath code _ -s | wl-copy; wl-clipboard-manager unlock"
-    $hyper+m     fullscreen disable, exec udiskie-dmenu
-    $win+grave   fullscreen disable, exec wl-clipboard-manager dmenu
-    Print        exec sway-screenshot-area
-    $hyper+Print exec sway-gif-area
-    $win+Print   exec sway-screenshare
-    $hyper+n fullscreen disable, exec "pgrep -x dmenu && pkill dmenu || networkmanager_dmenu"
+    $hyper+plus     exec bash -c "pkill -x qalculate-gtk || qalculate-gtk"
+    $hyper+d        fullscreen disable, exec wofi
+    $hyper+p        fullscreen disable, exec "wl-clipboard-manager lock; gopass ls --flat | wofi --dmenu | xargs --no-run-if-empty gopass show -c; wl-clipboard-manager unlock"
+    $hyper+u        fullscreen disable, exec "wl-clipboard-manager lock; gopass ls --flat | wofi --dmenu | xargs -I _ --no-run-if-empty gopass show -c _ username; wl-clipboard-manager unlock"
+    $hyper+a        fullscreen disable, exec "wl-clipboard-manager lock; ykman oath list | wofi --dmenu | xargs -I _ --no-run-if-empty ykman oath code _ -s | wl-copy; wl-clipboard-manager unlock"
+    $hyper+m        fullscreen disable, exec udiskie-dmenu
+    $win+grave      fullscreen disable, exec wl-clipboard-manager dmenu
+    Print           exec sway-screenshot-area
+    $hyper+Print    exec sway-gif-area
+    $win+Print      exec sway-screenshare
+    $hyper+n        fullscreen disable, exec "pgrep -x dmenu && pkill dmenu || networkmanager_dmenu"
 
     # Kill focused window
     $win+q kill
