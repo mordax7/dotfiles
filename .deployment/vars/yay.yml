@@ -149,6 +149,7 @@ yay:
   plantuml:
   graphviz:
   bosh-cli:
+  aws-iam-authenticator-bin:
 
   # go dev
   go:
