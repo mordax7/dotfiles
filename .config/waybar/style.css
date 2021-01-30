@@ -42,8 +42,6 @@ window#waybar {
     border-bottom: 3px solid @red;
 }
 
-#custom-usbguard,
-#custom-decrypted,
 #custom-updates,
 #custom-mail,
 #custom-vpn.off,
@@ -67,12 +65,9 @@ window#waybar {
 
 #mode,
 #pulseaudio,
-#custom-usbguard,
 #custom-yubikey,
-#custom-decrypted,
 #custom-systemd,
 #custom-updates,
-#custom-mail,
 #network,
 #cpu,
 #memory,
