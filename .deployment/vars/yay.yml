@@ -8,7 +8,6 @@ yay:
   logrotate:
   man-pages:
   f2fs-tools:
-  bashtop:
 
   # base-devel
   posix:
