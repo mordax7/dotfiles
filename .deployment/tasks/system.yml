@@ -20,6 +20,8 @@
     - { src: 'files/usr/lib/udev/rules.d/60-net.rules', dest: '/usr/lib/udev/rules.d/60-net.rules' }
     - { src: 'files/usr/applications/Zoom.desktop', dest: '/usr/applications/Zoom.desktop' }
     - { src: 'files/etc/fuse.conf', dest: '/etc/fuse.conf' }
+    - { src: 'files/etc/systemd/system/pacman-db-sync.service', dest: '/etc/systemd/system/pacman-db-sync.service' }
+    - { src: 'files/etc/systemd/system/pacman-db-sync.timer', dest: '/etc/systemd/system/pacman-db-sync.timer' }
   tags:
     - pulseaudio
     - bluetooth
@@ -38,6 +40,7 @@
     - "tlp.service"
     - "reflector.timer"
     - "pcscd.service"
+    - "pacman-db-sync.timer"
   tags:
     - network
     - bluetooth

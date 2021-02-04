@@ -1,0 +1,6 @@
+[Unit]
+Description=Pacman database update
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/pacman --sync --refresh

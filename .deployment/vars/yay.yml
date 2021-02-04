@@ -32,6 +32,9 @@ yay:
   pacman-contrib:
   reflector:
 
+  #aur
+  rebuild-detector:
+
   # hardware
   dell-command-configure:
   fwupd:
