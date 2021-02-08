@@ -1,7 +1,3 @@
-#!/usr/bin/fish
-
-[ "$TTY" == /dev/tty* ] || return 0
-
 for line in (systemctl --user show-environment)
     set key (echo "$line" | cut -d '=' -f 1)
     set value (echo "$line" | cut -d '=' -f 2- | tr -d \$\')
