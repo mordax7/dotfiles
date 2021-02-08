@@ -13,4 +13,5 @@ set TTY1 (tty)
 if test -z "$DISPLAY"; and test $TTY1 = "/dev/tty1"
 	systemd-cat -t sway sway
 	systemctl --user stop sway-session.target
+	systemctl --user unset-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
 end
