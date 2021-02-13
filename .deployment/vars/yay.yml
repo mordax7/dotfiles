@@ -65,6 +65,7 @@ yay:
   zathura-pdf-mupdf:
   lnav:
   vimiv-qt:
+  curlftpfs:
 
   # archiving
   atool:
