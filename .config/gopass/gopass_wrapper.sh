@@ -8,8 +8,9 @@ else
 fi
 
 export PATH="$PATH:/usr/local/bin" # required on MacOS/brew
+export PATH="$PATH:/usr/local/MacGPG2/bin" # required on MacOS/GPGTools GPGSuite
 export GPG_TTY="$(tty)"
 
-/usr/bin/gopass-jsonapi listen
+/home/aljaz/.local/share/go/bin/gopass-jsonapi listen
 
 exit $?
