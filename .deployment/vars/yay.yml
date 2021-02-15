@@ -29,11 +29,7 @@ yay:
   which:
 
   # other arch
-  pacman-contrib:
   reflector:
-
-  #aur
-  rebuild-detector:
 
   # hardware
   dell-command-configure:
@@ -142,6 +138,7 @@ yay:
   net-tools:
   nmap:
   openvpn:
+  whois:
 
   # dev tools
   neovim:
