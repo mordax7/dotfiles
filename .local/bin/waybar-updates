@@ -12,20 +12,12 @@ case "$1" in
         ;;
     refresh)
         yay="$(yay -Qu)"
-        dif="$(pacdiff -o)"
-        reb="$(checkrebuild)"
 
         yay_n=$(printf "$yay" | grep -c '^')
-        dif_n=$(printf "$dif" | grep -c '^')
-        reb_n=$(printf "$reb" | grep -c '^')
 
         text=""
         tooltip=""
 
-        [ -n "$text" -o -n "$reb" ] && text="/${reb_n}${text}"
-        [ -n "$reb" ]               && tooltip="Rebuild required:\n\n$reb\n\n${tooltip}"
-        [ -n "$text" -o -n "$dif" ] && text="/${dif_n}${text}"
-        [ -n "$dif" ]               && tooltip="pacdiff:\n\n$dif\n\n${tooltip}"
         [ -n "$text" -o -n "$yay" ] && text="${yay_n}${text}"
         [ -n "$yay" ]               && tooltip="yay:\n\n$yay\n\n${tooltip}"
 
