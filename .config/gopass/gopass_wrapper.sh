@@ -11,6 +11,6 @@ export PATH="$PATH:/usr/local/bin" # required on MacOS/brew
 export PATH="$PATH:/usr/local/MacGPG2/bin" # required on MacOS/GPGTools GPGSuite
 export GPG_TTY="$(tty)"
 
-/home/aljaz/.local/share/go/bin/gopass-jsonapi listen
+/usr/bin/gopass-jsonapi listen
 
 exit $?
