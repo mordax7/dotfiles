@@ -110,9 +110,6 @@ yay:
   mpv-mpris:
   ffmpeg:
 
-  # music
-  spotify:
-
   # fonts
   ttf-dejavu:
   ttf-courier-prime:
