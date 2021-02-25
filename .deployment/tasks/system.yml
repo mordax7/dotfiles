@@ -1,4 +1,9 @@
 ---
+- name: Creates personalized fonts directory
+  file:
+    path: "/usr/share/fonts/{{ ansible_user_id }}"
+    state: directory
+
 - name: copy system level configuration
   copy:
     src: "{{ item.src }}"
@@ -22,6 +27,12 @@
     - { src: 'files/etc/fuse.conf', dest: '/etc/fuse.conf' }
     - { src: 'files/etc/systemd/system/pacman-db-sync.service', dest: '/etc/systemd/system/pacman-db-sync.service' }
     - { src: 'files/etc/systemd/system/pacman-db-sync.timer', dest: '/etc/systemd/system/pacman-db-sync.timer' }
+    - { src: 'files/usr/share/fonts/{{ ansible_user_id }}/InputMonoNarrow-Bold.ttf', dest: '/usr/share/fonts/{{ ansible_user_id }}/InputMonoNarrow-Bold.ttf' }
+    - { src: 'files/usr/share/fonts/{{ ansible_user_id }}/InputMonoNarrow-BoldItalic.ttf', dest: '/usr/share/fonts/{{ ansible_user_id }}/InputMonoNarrow-BoldItalic.ttf' }
+    - { src: 'files/usr/share/fonts/{{ ansible_user_id }}/InputMonoNarrow-Italic.ttf', dest: '/usr/share/fonts/{{ ansible_user_id }}/InputMonoNarrow-Italic.ttf' }
+    - { src: 'files/usr/share/fonts/{{ ansible_user_id }}/InputMonoNarrow-Regular.ttf', dest: '/usr/share/fonts/{{ ansible_user_id }}/InputMonoNarrow-Regular.ttf' }
+    - { src: 'files/etc/fonts/conf.d/30-font-aliases.conf', dest: '/etc/fonts/conf.d/30-font-aliases.conf' }
+    - { src: 'files/etc/fonts/conf.d/75-joypixels.conf', dest: '/etc/fonts/conf.d/75-joypixels.conf' }
   tags:
     - pulseaudio
     - bluetooth
