@@ -13,8 +13,8 @@ case "$command" in
           echo "Missing commit message"
           exit 1
         else
-          yadm pull --rebase
           yadm add -u
+          yadm pull --rebase
           yadm commit -m "$command_argument"
           yadm push
         fi
