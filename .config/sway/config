@@ -15,6 +15,10 @@ input type:touchpad {
 
 seat * hide_cursor 10000
 
+output "Goldstar Company Ltd LG Ultra HD 0x00008EE9" {
+    scale 1.45
+}
+
 output * {
     bg "#222222" solid_color
 }
