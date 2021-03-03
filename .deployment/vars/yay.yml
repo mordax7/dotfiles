@@ -78,7 +78,7 @@ yay:
 
   # sway
   sway:
-  swaylock:
+  swaylock-effects-git:
   waybar:
   xorg-server-xwayland:
   wl-clipboard:
