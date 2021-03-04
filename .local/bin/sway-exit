@@ -18,12 +18,42 @@ case "$1" in
         ;;
     lock)
         before_lock
-        swaylock
+        swaylock \
+          --screenshots \
+          --clock \
+          --indicator \
+          --indicator-radius 100 \
+          --indicator-thickness 7 \
+          --effect-blur 7x5 \
+          --effect-vignette 0.5:0.5 \
+          --ring-color 282828 \
+          --key-hl-color 928374 \
+          --line-color 00000000 \
+          --inside-color 282828 \
+          --separator-color 00000000 \
+          --text-wrong-color cc241d \
+          --grace 2 \
+          --fade-in 0.2
         ;;
     suspend)
         before_lock
         systemctl -i suspend
-        swaylock
+        swaylock \
+          --screenshots \
+          --clock \
+          --indicator \
+          --indicator-radius 100 \
+          --indicator-thickness 7 \
+          --effect-blur 7x5 \
+          --effect-vignette 0.5:0.5 \
+          --ring-color 282828 \
+          --key-hl-color 928374 \
+          --line-color 00000000 \
+          --inside-color 282828 \
+          --separator-color 00000000 \
+          --text-wrong-color cc241d \
+          --grace 2 \
+          --fade-in 0.2
         ;;
     reboot)
         systemctl -i reboot
@@ -36,3 +66,4 @@ case "$1" in
         exit 2
         ;;
 esac
+
