@@ -181,6 +181,7 @@ yay:
   v4l2loopback-dkms:
   xdg-desktop-portal-wlr:
   pipewire-media-session:
+  libpipewire02:
 
   # kubernetes
   kubectl:
