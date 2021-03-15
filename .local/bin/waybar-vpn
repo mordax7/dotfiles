@@ -3,10 +3,10 @@
 vpnstatus() {
     check_vpn_status=$(nmcli con show --active | grep vpn)
     if [ -n "$check_vpn_status" ]; then
-        icon=''
+        icon="<span foreground='#928374'></span>"
         class=on
     else
-        icon=''
+        icon="<span foreground='#928374'></span>"
         class=off
     fi
     printf '{"text": " %s ", "class": "%s"}\n' "$icon" "$class"
