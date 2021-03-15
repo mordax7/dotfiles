@@ -45,8 +45,11 @@
         "interval": "once"
     },
     "custom/vpn": {
+        "format": "{}",
+        "return-type": "json",
         "exec": "waybar-vpn",
-        "return-type": "json"
+        "on-click": "nmcli con up office passwd-file /run/media/aljaz/wrk-stick/work/vpn/office/pass",
+        "on-click-right": "nmcli con down office"
     },
     "custom/dnd": {
         "exec": "waybar-dnd",
