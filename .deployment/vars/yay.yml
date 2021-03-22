@@ -84,7 +84,7 @@ yay:
   wl-clipboard:
   wl-clipboard-manager:
   python-i3ipc:
-  mako:
+  mako-git:
   gtk-theme-arc-gruvbox-git:
   wlsunset-git:
   light:
