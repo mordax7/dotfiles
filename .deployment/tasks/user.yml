@@ -15,6 +15,7 @@
     - "wl-clipboard-manager.service"
     - "sway-autoname-workspaces.service"
     - "playerctld.service"
+    - "mako.service"
   tags:
     - systemd
 
