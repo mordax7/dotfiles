@@ -35,5 +35,5 @@
     ff = only
 
 # --------------------- C O N F I G ---------------------
-[includeIf "gitdir:~/.projects/work"]
+[includeIf "gitdir:~/.projects/work/"]
     path = ~/.projects/work/.gitconfig
