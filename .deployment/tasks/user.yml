@@ -16,6 +16,7 @@
     - "sway-autoname-workspaces.service"
     - "playerctld.service"
     - "mako.service"
+    - "wluma.service"
   tags:
     - systemd
 
