@@ -17,6 +17,10 @@
     # don't create backup *.orig files
     keepBackup = false
 
+# --------------------- B R A N C H ---------------------
+[init]
+    defaultBranch = main
+
 # ----------------------- D I F F -----------------------
 [diff]
     guitool = intellij
