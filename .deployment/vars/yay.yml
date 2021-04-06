@@ -136,6 +136,7 @@ yay:
   nmap:
   openvpn:
   whois:
+  dog:
 
   # dev tools
   neovim:
