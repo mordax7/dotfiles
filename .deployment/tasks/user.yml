@@ -17,6 +17,7 @@
     - "playerctld.service"
     - "mako.service"
     - "wluma.service"
+    - "systemd-tmpfiles-setup.service"
   tags:
     - systemd
 
