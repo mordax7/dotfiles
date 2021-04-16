@@ -149,6 +149,7 @@ yay:
   graphviz:
   bosh-cli:
   aws-iam-authenticator-bin:
+  shellcheck:
 
   # go dev
   go:
