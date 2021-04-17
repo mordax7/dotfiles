@@ -63,6 +63,7 @@ yay:
   lnav:
   vimiv-qt:
   curlftpfs:
+  dfrs:
 
   # archiving
   atool:
@@ -76,7 +77,7 @@ yay:
   unzip:
   zip:
 
-  # sway
+  # ui
   sway:
   swaylock-effects-git:
   waybar:
@@ -93,6 +94,7 @@ yay:
   vulkan-headers:
   flashfocus-git:
   qt5-wayland:
+  wofi:
 
   # audio
   pulseaudio:
@@ -150,6 +152,7 @@ yay:
   bosh-cli:
   aws-iam-authenticator-bin:
   shellcheck:
+  fzf:
 
   # go dev
   go:
@@ -181,8 +184,8 @@ yay:
   wf-recorder:
   v4l2loopback-dkms:
   xdg-desktop-portal-wlr:
-  pipewire-media-session:
   libpipewire02:
+  pipewire-media-session:
 
   # kubernetes
   kubectl:
@@ -211,8 +214,6 @@ yay:
 
   # misc
   dmenu-term:
-  fzf:
-  wofi:
   qalculate-gtk:
   libreoffice-fresh:
   signal-desktop:
