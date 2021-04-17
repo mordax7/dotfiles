@@ -2,9 +2,8 @@
 font pango: Taskbar, Cantarell 9
 
 input type:keyboard {
-	xkb_layout de-hyper,de,us
-	xkb_options grp:shifts_toggle,compose:ralt,caps:hyper
-	xkb_variant ,nodeadkeys
+	xkb_layout de-hyper,us
+	xkb_options grp:shifts_toggle,caps:hyper
 	xkb_numlock enable
 }
 
