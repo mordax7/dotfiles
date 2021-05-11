@@ -21,6 +21,9 @@
 [init]
     defaultBranch = main
 
+[remote "origin"]
+	fetch = +refs/pull/*/head:refs/remotes/origin/pr/*
+
 # ----------------------- D I F F -----------------------
 [diff]
     guitool = intellij
