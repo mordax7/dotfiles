@@ -16,7 +16,6 @@
     - "sway-autoname-workspaces.service"
     - "playerctld.service"
     - "mako.service"
-    - "wluma.service"
     - "systemd-tmpfiles-setup.service"
     - "battery-low-notify.service"
   tags:
