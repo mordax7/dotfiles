@@ -35,6 +35,7 @@ yay:
   dell-command-configure:
   fwupd:
   tlp:
+  acpi:
   dmidecode:
   upower:
   bolt:
