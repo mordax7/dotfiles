@@ -1,9 +1,13 @@
 ---
 # Fonts: http://input.fontbureau.com/download/?customize&fontSelection=fourStyleFamily&regular=InputMonoNarrow-Regular&italic=InputMonoNarrow-Italic&bold=InputMonoNarrow-Bold&boldItalic=InputMonoNarrow-BoldItalic&a=0&g=0&i=serifs_round&l=serifs_round&zero=slash&asterisk=height&braces=0&preset=default&line-height=1.1&email=
-- name: Creates personalized fonts directory
+- name: Creates system directories
   file:
-    path: "/usr/share/fonts/{{ ansible_user_id }}"
+    path: "{{ item }}"
     state: directory
+  loop:
+    - "/usr/share/fonts/{{ ansible_user_id }}"
+    - /etc/systemd/journald.conf.d
+    - /etc/systemd/logind.conf.d
 
 - name: copy system level configuration
   copy:
@@ -35,6 +39,8 @@
     - { src: 'files/etc/fonts/conf.d/30-font-aliases.conf', dest: '/etc/fonts/conf.d/30-font-aliases.conf' }
     - { src: 'files/etc/fonts/conf.d/75-joypixels.conf', dest: '/etc/fonts/conf.d/75-joypixels.conf' }
     - { src: 'files/etc/pipewire/media-session.d/media-session.conf', dest: '/etc/pipewire/media-session.d/media-session.conf' }
+    - { src: 'files/etc/systemd/journald.conf.d/override.conf', dest: '/etc/systemd/journald.conf.d/override.conf' }
+    - { src: 'files/etc/systemd/logind.conf.d/override.conf', dest: '/etc/systemd/logind.conf.d/override.conf' }
   tags:
     - pulseaudio
     - bluetooth
