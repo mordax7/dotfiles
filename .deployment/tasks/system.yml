@@ -30,8 +30,6 @@
     - { src: 'files/usr/lib/udev/rules.d/60-net.rules', dest: '/usr/lib/udev/rules.d/60-net.rules' }
     - { src: 'files/usr/share/applications/Zoom.desktop', dest: '/usr/share/applications/Zoom.desktop' }
     - { src: 'files/etc/fuse.conf', dest: '/etc/fuse.conf' }
-    - { src: 'files/etc/systemd/system/pacman-db-sync.service', dest: '/etc/systemd/system/pacman-db-sync.service' }
-    - { src: 'files/etc/systemd/system/pacman-db-sync.timer', dest: '/etc/systemd/system/pacman-db-sync.timer' }
     - { src: 'files/usr/share/fonts/{{ ansible_user_id }}/InputMonoNarrow-Bold.ttf', dest: '/usr/share/fonts/{{ ansible_user_id }}/InputMonoNarrow-Bold.ttf' }
     - { src: 'files/usr/share/fonts/{{ ansible_user_id }}/InputMonoNarrow-BoldItalic.ttf', dest: '/usr/share/fonts/{{ ansible_user_id }}/InputMonoNarrow-BoldItalic.ttf' }
     - { src: 'files/usr/share/fonts/{{ ansible_user_id }}/InputMonoNarrow-Italic.ttf', dest: '/usr/share/fonts/{{ ansible_user_id }}/InputMonoNarrow-Italic.ttf' }

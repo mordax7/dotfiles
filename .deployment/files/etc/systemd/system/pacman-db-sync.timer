@@ -1,8 +1,0 @@
-[Unit]
-Description=Periodic pacman sync and refresh of the database
-
-[Timer]
-OnCalendar=hourly
-
-[Install]
-WantedBy=timers.target

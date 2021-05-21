@@ -9,7 +9,6 @@
         "custom/progress",
         "custom/yubikey",
         "custom/systemd",
-        "custom/updates",
         "custom/recording",
         "custom/dnd",
         "pulseaudio",
@@ -37,13 +36,6 @@
         "exec": "waybar-systemd",
         "return-type": "json",
         "interval": 10
-    },
-    "custom/updates": {
-        "exec": "waybar-updates show",
-        "return-type": "json",
-        "signal": 1,
-        "on-click-right": "waybar-updates refresh",
-        "interval": "once"
     },
     "custom/vpn": {
         "format": "{}",
