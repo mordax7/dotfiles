@@ -8,6 +8,7 @@
     - "/usr/share/fonts/{{ ansible_user_id }}"
     - /etc/systemd/journald.conf.d
     - /etc/systemd/logind.conf.d
+    - /etc/pacman.d/hooks
 
 - name: copy system level configuration
   copy:
@@ -22,6 +23,7 @@
     - { src: 'files/etc/bluetooth/main.conf', dest: '/etc/bluetooth/main.conf' }
     - { src: 'files/etc/systemd/system/reflector.service', dest: '/etc/systemd/system/reflector.service' }
     - { src: 'files/etc/systemd/system/reflector.timer', dest: '/etc/systemd/system/reflector.timer' }
+    - { src: 'files/etc/pacman.d/hooks/mirrorlist.hook', dest: '/etc/pacman.d/hooks/mirrorlist.hook' }
     - { src: 'files/etc/pacman.conf', dest: '/etc/pacman.conf' }
     - { src: 'files/etc/modprobe.d/v4l2loopback.conf', dest: '/etc/modprobe.d/v4l2loopback.conf' }
     - { src: 'files/etc/modules-load.d/v4l2loopback.conf', dest: '/etc/modules-load.d/v4l2loopback.conf' }
@@ -57,7 +59,6 @@
     - "tlp.service"
     - "reflector.timer"
     - "pcscd.service"
-    - "pacman-db-sync.timer"
   tags:
     - network
     - bluetooth

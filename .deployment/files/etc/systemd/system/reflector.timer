@@ -2,7 +2,8 @@
 Description=Periodic pacman mirrorlist refresh
 
 [Timer]
-OnCalendar=hourly
+OnCalendar=*-*-* 12:30:00
+RandomizedDelaySec=1800
 
 [Install]
 WantedBy=timers.target
