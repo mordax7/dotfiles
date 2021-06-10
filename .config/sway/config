@@ -314,7 +314,7 @@ bindsym --to-code {
     $win+m mode $mode_workspaces_monitors
 }
 
-exec_always "pgrep -x signal-desktop || signal-desktop"
+exec_always "pgrep -x signal-desktop || signal-desktop --enable-features=UseOzonePlatform --ozone-platform=wayland"
 exec_always "pgrep -x telegram-desktop || telegram-desktop"
 
 # Load systemd integration
