@@ -38,7 +38,6 @@
     - { src: 'files/usr/share/fonts/{{ ansible_user_id }}/InputMonoNarrow-Regular.ttf', dest: '/usr/share/fonts/{{ ansible_user_id }}/InputMonoNarrow-Regular.ttf' }
     - { src: 'files/etc/fonts/conf.d/30-font-aliases.conf', dest: '/etc/fonts/conf.d/30-font-aliases.conf' }
     - { src: 'files/etc/fonts/conf.d/75-joypixels.conf', dest: '/etc/fonts/conf.d/75-joypixels.conf' }
-    - { src: 'files/etc/pipewire/media-session.d/media-session.conf', dest: '/etc/pipewire/media-session.d/media-session.conf' }
     - { src: 'files/etc/systemd/journald.conf.d/override.conf', dest: '/etc/systemd/journald.conf.d/override.conf' }
     - { src: 'files/etc/systemd/logind.conf.d/override.conf', dest: '/etc/systemd/logind.conf.d/override.conf' }
   tags:
