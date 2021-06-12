@@ -1,4 +1,3 @@
 [screencast]
 max_fps=10
-chooser_type="none"
 exec_before="waybar-dnd on"

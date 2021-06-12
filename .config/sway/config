@@ -168,7 +168,7 @@ bindsym --to-code {
     $win+Shift+Return exec kitty --config NONE /bin/bash
 
     # Launcher
-    $hyper+plus     exec bash -c "pkill -x qalculate-gtk || qalculate-gtk"
+    $hyper+equal    exec bash -c "pkill -x qalculate-gtk || qalculate-gtk"
     $hyper+d        fullscreen disable, exec wofi
     $hyper+p        fullscreen disable, exec "wl-clipboard-manager lock; gopass ls --flat | wofi --dmenu | xargs --no-run-if-empty gopass show -c; wl-clipboard-manager unlock"
     $hyper+u        fullscreen disable, exec "wl-clipboard-manager lock; gopass ls --flat | wofi --dmenu | xargs -I _ --no-run-if-empty gopass show -c _ username; wl-clipboard-manager unlock"
