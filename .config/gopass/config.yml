@@ -2,12 +2,12 @@ autoclip: false
 autoimport: true
 cliptimeout: 45
 exportkeys: true
-mime: true
 nocolor: false
 nopager: false
 notifications: false
+parsing: true
 path: /home/aljaz/.local/share/gopass/stores/root
 safecontent: false
 mounts:
-  lando-gopass: /home/aljaz/.local/share/gopass/stores/lando-gopass
-  lando: /home/aljaz/.local/share/gopass/stores/lando
+    lando: /home/aljaz/.local/share/gopass/stores/lando
+    lando-gopass: /home/aljaz/.local/share/gopass/stores/lando-gopass
