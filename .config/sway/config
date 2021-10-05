@@ -20,11 +20,11 @@ output "Goldstar Company Ltd LG Ultra HD 0x00008EE9" {
     subpixel rgb
 }
 
-output "eDP-1" {
-    scale 2
-    subpixel rgb
-    pos 0 0
-}
+#output "eDP-1" {
+#    scale 2
+#    subpixel rgb
+#    pos 0 0
+#}
 
 output "Ancor Communications Inc VS248 EBLMQS069625" {
     pos 1920 0
