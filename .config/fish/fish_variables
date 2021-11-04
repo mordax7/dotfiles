@@ -26,7 +26,8 @@ SETUVAR _fish_abbr_upgrade:topgrade
 SETUVAR _fish_abbr_vim:nvim
 SETUVAR _fisher_evanlucas_2F_fish_2D_kubectl_2D_completions_files:/home/aljaz/\x2econfig/fish/completions/kubectl\x2efish
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:/home/aljaz/\x2econfig/fish/functions/fisher\x2efish\x1e/home/aljaz/\x2econfig/fish/completions/fisher\x2efish
-SETUVAR _fisher_plugins:jorgebucaran/fisher\x1eevanlucas/fish\x2dkubectl\x2dcompletions
+SETUVAR _fisher_joshmedeski_2F_fish_2D_fzf_2D_todoist_files:/home/aljaz/\x2econfig/fish/functions/fzf_todoist_close\x2efish\x1e/home/aljaz/\x2econfig/fish/functions/fzf_todoist_delete\x2efish\x1e/home/aljaz/\x2econfig/fish/functions/fzf_todoist_item\x2efish\x1e/home/aljaz/\x2econfig/fish/functions/fzf_todoist_labels\x2efish\x1e/home/aljaz/\x2econfig/fish/functions/fzf_todoist_project\x2efish
+SETUVAR _fisher_plugins:jorgebucaran/fisher\x1eevanlucas/fish\x2dkubectl\x2dcompletions\x1ejoshmedeski/fish\x2dfzf\x2dtodoist
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:005fd7
