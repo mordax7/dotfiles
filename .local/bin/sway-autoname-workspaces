@@ -11,7 +11,7 @@ import i3ipc
 WINDOW_ICONS = {
     "bleachbit": "",
     "calibre": "",
-    "brave-browser": "",
+    "chromium": "",
     "jetbrains-idea": "",
     "draw.io": "",
     "firefox": "",
