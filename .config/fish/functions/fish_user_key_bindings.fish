@@ -1,6 +1,6 @@
 function fish_user_key_bindings
-	# fzf
-	fzf_key_bindings
+    # fzf
+    fzf_key_bindings
 
     # todoist
     bind -M insert \cti fzf_todoist_item
