@@ -1,7 +1,8 @@
 function todoist_quick_add
-  if [ $argv ]
-    todoist quick '$argv'
+  read -P 'Name of the task: ' name
+  if [ $name ]
+    todoist quick $name
   else
-    echo 'Missing argument'
+    echo '[ERROR] Task name cannot be empty'
   end
 end

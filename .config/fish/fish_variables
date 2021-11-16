@@ -19,6 +19,7 @@ SETUVAR _fish_abbr_rm:rm\x20\x2dI
 SETUVAR _fish_abbr_scat:sudo\x20bat
 SETUVAR _fish_abbr_ssh:TERM\x3dxterm\x20ssh
 SETUVAR _fish_abbr_svim:sudoedit
+SETUVAR _fish_abbr_t:todoist
 SETUVAR _fish_abbr_ta:todoist\x20add\x20\x27\x27
 SETUVAR _fish_abbr_tf:terraform
 SETUVAR _fish_abbr_tfl:find\x20\x2e\x20\x2dpath\x20\x22\x2a\x2eterraform\x22\x20\x2dprune\x20\x2do\x20\x2dname\x20\x22\x2a\x2etf\x2a\x22\x20\x2dprintf\x20\x22\x25h\x5cn\x22\x20\x7c\x20uniq\x20\x7c\x20xargs\x20\x2dn1\x20terraform\x20fmt
