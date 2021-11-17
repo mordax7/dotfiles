@@ -15,7 +15,7 @@ input type:touchpad {
 
 seat * hide_cursor 10000
 
-output "Goldstar Company Ltd LG Ultra HD 0x00008EE9" {
+output "Goldstar Company Ltd LG Ultra HD 0x00008FD7" {
     scale 1.45
     subpixel rgb
 }
