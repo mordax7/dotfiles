@@ -126,6 +126,7 @@ yay:
   xorg-fonts-misc:
   otf-font-awesome:
   ttf-joypixels:
+  ttf-roboto:
 
   # network
   networkmanager:
