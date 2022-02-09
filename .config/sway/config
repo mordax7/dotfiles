@@ -15,19 +15,19 @@ input type:touchpad {
 
 seat * hide_cursor 10000
 
-output "Goldstar Company Ltd LG Ultra HD 0x00008FD7" {
+output "DP-3" {
     scale 1.45
+    pos 0 0
     subpixel rgb
 }
 
-#output "eDP-1" {
-#    scale 2
-#    subpixel rgb
-#    pos 0 0
-#}
+output "eDP-1" {
+    scale 2
+    subpixel rgb
+}
 
-output "Ancor Communications Inc VS248 EBLMQS069625" {
-    pos 1920 0
+output "DP-1" {
+    pos 0 0
 }
 
 output * {
