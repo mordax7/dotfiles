@@ -98,9 +98,7 @@ yay:
   wofi:
 
   # audio
-  pulseaudio:
-  pulseaudio-alsa:
-  pulseaudio-bluetooth:
+  pipewire-pulse:
   pamixer:
   pavucontrol:
   playerctl:
