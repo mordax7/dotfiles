@@ -1,1 +1,44 @@
 ---
+- name: Creates system directories
+  file:
+    path: "{{ item }}"
+    state: directory
+  loop:
+    - /etc/systemd/system/usbguard.service.d
+
+- name: copy system level configuration
+  copy:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    owner: root
+    group: root
+    mode: 0644
+    remote_src: yes
+  loop:
+    - { src: 'files/etc/usbguard/usbguard-daemon.conf', dest: '/etc/usbguard/usbguard-daemon.conf' }
+    - { src: 'files/etc/systemd/system/usbguard.service.d/override.conf', dest: '/etc/systemd/system/usbguard.service.d/override.conf' }
+
+- name: Check if usbguard rules exist
+  stat:
+    path: "/etc/usbguard/rules.conf"
+  register: usbguard_rules_status
+
+- name: Generate usbguard rules if they do not exist
+  shell: "usbguard generate-policy > /etc/usbguard/rules.conf"
+  when: not usbguard_rules_status.stat.exists
+
+- name: Change usbguard config files permissions
+  ansible.builtin.file:
+    path: "{{ item.path }}"
+    mode: "0600"
+  loop:
+    - { path: '/etc/usbguard/rules.conf' }
+    - { path: '/etc/usbguard/usbguard-daemon.conf' }
+
+- name: Enable system services
+  systemd:
+    name: "{{ item }}"
+    enabled: yes
+  loop:
+    - "usbguard.service"
+    - "usbguard-dbus.service"

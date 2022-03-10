@@ -206,6 +206,7 @@ yay:
   hopenpgp-tools:
   polkit-gnome:
   yubikey-manager:
+  usbguard:
 
   # git
   git:

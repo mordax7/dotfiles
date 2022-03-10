@@ -7,6 +7,7 @@
     ],
     "modules-right": [
         "custom/progress",
+        "custom/usbguard",
         "custom/yubikey",
         "custom/systemd",
         "custom/recording",
@@ -27,6 +28,12 @@
         "exec": "waybar-progress",
         "return-type": "json",
         "interval": 1
+    },
+    "custom/usbguard": {
+        "exec": "waybar-usbguard",
+        "return-type": "json",
+        "on-click": "waybar-usbguard allow",
+        "on-click-right": "waybar-usbguard reject"
     },
     "custom/yubikey": {
         "exec": "waybar-yubikey",
