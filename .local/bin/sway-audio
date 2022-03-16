@@ -18,10 +18,10 @@ case "$1" in
         ;;
     bt-connect-headphones) bluetoothctl connect 28:9A:4B:25:18:C8 ;;
     bt-disconnect)         bluetoothctl disconnect ;;
-    headphones-internal)   pactl set-default-sink   alsa_output.pci-0000_00_1f.3.analog-stereo && pactl set-default-source alsa_input.pci-0000_00_1f.3.analog-stereo && pactl set-sink-port alsa_output.pci-0000_00_1f.3.analog-stereo analog-output-headphones && pactl set-source-port alsa_input.pci-0000_00_1f.3.analog-stereo analog-input-headset-mic ;;
-    analog-internal)       pactl set-default-sink   alsa_output.pci-0000_00_1f.3.analog-stereo && pactl set-default-source alsa_input.pci-0000_00_1f.3.analog-stereo && pactl set-sink-port alsa_output.pci-0000_00_1f.3.analog-stereo analog-output-speaker && pactl set-source-port alsa_input.pci-0000_00_1f.3.analog-stereo analog-input-internal-mic;;
-    razer)                 pactl set-default-sink   alsa_output.usb-Razer_Razer_Kraken_7.1_V2_00000000-00.analog-stereo && pactl set-default-source alsa_input.usb-Razer_Razer_Kraken_7.1_V2_00000000-00.analog-stereo ;;
-    steelseries)           pactl set-default-sink   alsa_output.usb-SteelSeries_Arctis_Pro_Wireless-00.mono-chat && pactl set-default-source alsa_input.usb-SteelSeries_Arctis_Pro_Wireless-00.mono-chat ;;
+    headphones-internal)   pactl set-default-sink  alsa_output.pci-0000_00_1f.3.analog-stereo && pactl set-default-source alsa_input.pci-0000_00_1f.3.analog-stereo && pactl set-sink-port alsa_output.pci-0000_00_1f.3.analog-stereo analog-output-headphones && pactl set-source-port alsa_input.pci-0000_00_1f.3.analog-stereo analog-input-headset-mic ;;
+    analog-internal)       pactl set-default-sink  alsa_output.pci-0000_00_1f.3.analog-stereo && pactl set-default-source alsa_input.pci-0000_00_1f.3.analog-stereo && pactl set-sink-port alsa_output.pci-0000_00_1f.3.analog-stereo analog-output-speaker && pactl set-source-port alsa_input.pci-0000_00_1f.3.analog-stereo analog-input-internal-mic;;
+    razer)                 pactl set-default-sink  alsa_output.usb-Razer_Razer_Kraken_7.1_V2_00000000-00.analog-stereo && pactl set-default-source alsa_input.usb-Razer_Razer_Kraken_7.1_V2_00000000-00.analog-stereo ;;
+    steelseries)           pactl set-default-sink  alsa_output.usb-SteelSeries_Arctis_Pro_Wireless-00.stereo-game && pactl set-default-source alsa_output.usb-SteelSeries_Arctis_Pro_Wireless-00.stereo-game ;;
     output-mute)           pactl set-sink-mute     @DEFAULT_SINK@   toggle ;;
     input-mute)            pactl set-source-mute   @DEFAULT_SOURCE@ toggle ;;
     output-volume-up)      pactl set-sink-volume   @DEFAULT_SINK@   +5% ;;
