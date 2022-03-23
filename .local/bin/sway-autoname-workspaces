@@ -30,6 +30,8 @@ WINDOW_ICONS = {
     "riot": "",
     "scli": "",
     "signal": "",
+    "telegramdesktop": "",
+    "jami": "",
     "slack": "",
     "spotify": "",
     "transmission-gtk": "",
