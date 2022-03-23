@@ -1,0 +1,23 @@
+#!/bin/bash
+
+if [ "$1" = "--term" ]; then
+    shift
+
+    kitty_args=()
+    if [[ "$1" == "-"* ]]; then
+        while [[ "$#" -gt 1 ]] && [[ "$1" != "--" ]]; do
+            kitty_args+=("$1")
+            shift
+        done
+        [[ "$1" != "--" ]] || shift
+    fi
+
+    title="${1##*/}"
+    title="${title:-kitty}"
+    app="kitty ${kitty_args[@]} --class $title"
+else
+    title="${1##*/}"
+    args="--scope"
+fi
+
+exec systemd-run --quiet --no-block --user --slice app.slice --unit "launch-$title-$(date '+%s%N')" $args -- $app "$@"

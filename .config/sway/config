@@ -164,22 +164,22 @@ mode $mode_workspaces_monitors {
 
 bindsym --to-code {
     # Terminal
-    $hyper+Return exec kitty
+    $hyper+Return exec cglaunch --term
     $win+Return exec kitty --config NONE
     $win+Shift+Return exec kitty --config NONE /bin/bash
 
     # Launcher
-    $hyper+equal    exec bash -c "pkill -x qalculate-gtk || qalculate-gtk"
-    $hyper+d        fullscreen disable, exec wofi
-    $hyper+p        fullscreen disable, exec "wl-clipboard-manager lock; gopass ls --flat | wofi --dmenu | xargs --no-run-if-empty gopass show -c; wl-clipboard-manager unlock"
-    $hyper+u        fullscreen disable, exec "wl-clipboard-manager lock; gopass ls --flat | wofi --dmenu | xargs -I _ --no-run-if-empty gopass show -c _ username; wl-clipboard-manager unlock"
-    $hyper+a        fullscreen disable, exec "wl-clipboard-manager lock; ykman oath accounts list | wofi --dmenu | xargs -I _ --no-run-if-empty ykman oath accounts code _ -s | wl-copy; wl-clipboard-manager unlock"
-    $hyper+m        fullscreen disable, exec udiskie-dmenu
-    $win+grave      fullscreen disable, exec wl-clipboard-manager dmenu
-    Print           exec sway-screenshot-area
-    $hyper+Print    exec sway-gif-area
-    $win+Print      exec sway-screenshare
-    $hyper+n        fullscreen disable, exec "pgrep -x dmenu && pkill dmenu || networkmanager_dmenu"
+    $hyper+equal    exec bash -c "cgkill qalculate-gtk || qalculate-gtk"
+    $hyper+d        fullscreen disable, exec cglaunch wofi
+    $hyper+p        fullscreen disable, exec "wl-clipboard-manager lock; cglaunch gopass ls --flat | wofi --dmenu | xargs --no-run-if-empty gopass show -c; wl-clipboard-manager unlock"
+    $hyper+u        fullscreen disable, exec "wl-clipboard-manager lock; cglaunch gopass ls --flat | wofi --dmenu | xargs -I _ --no-run-if-empty gopass show -c _ username; wl-clipboard-manager unlock"
+    $hyper+a        fullscreen disable, exec "wl-clipboard-manager lock; cglaunch ykman oath accounts list | wofi --dmenu | xargs -I _ --no-run-if-empty ykman oath accounts code _ -s | wl-copy; wl-clipboard-manager unlock"
+    $hyper+m        fullscreen disable, exec cglaunch udiskie-dmenu
+    $win+grave      fullscreen disable, exec cglaunch wl-clipboard-manager dmenu
+    Print           exec cglaunch sway-screenshot-area
+    $hyper+Print    exec cglaunch sway-gif-area
+    $win+Print      exec cglaunch sway-screenshare
+    $hyper+n        fullscreen disable, exec "cglaunch dmenu && pkill dmenu || networkmanager_dmenu"
 
     # Kill focused window
     $win+q kill
@@ -315,8 +315,8 @@ bindsym --to-code {
     $win+m mode $mode_workspaces_monitors
 }
 
-exec_always "pgrep -x signal-desktop || signal-desktop --enable-features=UseOzonePlatform --ozone-platform=wayland"
-exec_always "pgrep -x telegram-desktop || telegram-desktop"
+exec_always "cggrep scli || cglaunch --term -o font_size=12 scli"
+exec_always "cglaunch telegram-desktop || telegram-desktop"
 
 # Load systemd integration
 include /etc/sway/config.d/*
