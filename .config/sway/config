@@ -69,7 +69,6 @@ for_window    [app_id="Brave-browser"]                          move container t
 for_window    [app_id="firefox"]                                move container to $worspace2, title_format "Firefox"
 for_window    [class="jetbrains-idea"]                          move container to $workspace3, title_format "Idea"
 for_window    [app_id="kitty"]                                  move container to $workspace4, title_format "Kitty"
-for_window    [class="Spotify"]                                 move container to $workspace10, title_format "Spotify"
 for_window    [title="meet.google.com is sharing your screen."] floating enable
 for_window    [app_id="dmenu.*"]                                floating enable, resize set width 60ppt height 80ppt
 for_window    [app_id="dmenu-browser"]                          resize set height 20ppt
