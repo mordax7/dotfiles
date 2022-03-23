@@ -3,20 +3,20 @@
   hosts: localhost
   connection: local
   tasks:
-    - include: tasks/packages.yml
+    - import_tasks: tasks/packages.yml
       tags:
         - packages
 
-    - include: tasks/system.yml
+    - import_tasks: tasks/system.yml
       become: true
       tags:
         - system
 
-    - include: tasks/harden.yml
+    - import_tasks: tasks/harden.yml
       become: true
       tags:
         - harden
 
-    - include: tasks/user.yml
+    - import_tasks: tasks/user.yml
       tags:
         - user
