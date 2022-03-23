@@ -1,0 +1,30 @@
+[Default Applications]
+application/epub+zip=org.pwmt.zathura.desktop
+application/pdf=org.pwmt.zathura.desktop
+application/pdf=org.pwmt.zathura-pdf-mupdf.desktop
+application/vnd.ms-word.document.macroenabled.12=libreoffice-writer.desktop
+application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop
+application/xhtml+xml=chromium.desktop
+application/xml=chromium.desktop
+image/gif=vimiv.desktop
+image/jpeg=vimiv.desktop
+image/png=vimiv.desktop
+image/svg+xml=vimiv.desktop
+inode/directory=xplr.desktop
+text/csv=visidata.desktop
+text/html=chromium.desktop
+text/plain=nvim.desktop
+text/tab-separated-values=visidata.desktop
+text/x-c=nvim.desktop
+text/x-diff=nvim.desktop
+text/x-shellscript=nvim.desktop
+video/mp4=mpv.desktop
+video/x-matroska=mpv.desktop
+x-scheme-handler/about=chromium.desktop
+x-scheme-handler/http=chromium.desktop
+x-scheme-handler/https=chromium.desktop
+x-scheme-handler/unknown=chromium.desktop
+x-scheme-handler/tg=userapp-Telegram Desktop-OGPTW0.desktop
+
+[Added Associations]
+x-scheme-handler/tg=userapp-Telegram Desktop-OGPTW0.desktop;
