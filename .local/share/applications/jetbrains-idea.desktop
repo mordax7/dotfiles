@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=IntelliJ IDEA Ultimate Edition
+Comment=Intelligent Java IDE
+Exec=env IDEA_JDK=/usr/lib/jvm/java-11-openjdk /usr/bin/intellij-idea-ultimate-edition %u
+Icon=intellij-idea-ultimate-edition
+Terminal=false
+StartupWMClass=jetbrains-idea
+Type=Application
+Categories=Development;IDE;
+
