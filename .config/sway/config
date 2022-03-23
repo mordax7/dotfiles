@@ -62,7 +62,7 @@ set $workspace0 workspace number 10
 for_window    [app_id=".*"]                                     sticky enable
 for_window    [window_role="pop-up"]                            floating enable
 for_window    [app_id="udiskie"]                                floating enable
-for_window    [app_id="Signal"]                                 move to scratchpad, resize set width 60ppt height 80ppt
+for_window    [app_id="scli"]                                   move to scratchpad, resize set width 60ppt height 80ppt
 for_window    [instance="jami-gnome"]                           move to scratchpad, resize set width 60ppt height 80ppt
 for_window    [app_id="telegramdesktop"]                        move to scratchpad, resize set width 60ppt height 80ppt
 for_window    [app_id="chromium"]                               move container to $workspace2, title_format "Chromium"
