@@ -181,7 +181,7 @@ bindsym --to-code {
     $hyper+Print    exec cglaunch sway-gif-area
     $win+Print      exec cglaunch sway-screenshare
     $hyper+n        fullscreen disable, exec "cglaunch dmenu && cgkill dmenu || networkmanager_dmenu"
-    $win+f          fullscreen disable, exec "cglaunch --term -o font_size=12 ranger"
+    $win+f          fullscreen disable, exec "cglaunch --term ranger"
 
     # Kill focused window
     $win+q kill
