@@ -14,7 +14,7 @@ listen() {
 
 allow() {
     blocked_id="$(usbguard list-devices -b | head -n1 | grep -Po '^[^:]+')"
-    usbguard allow-device "$blocked_id"
+    usbguard allow-device -p "$blocked_id"
 }
 
 reject() {
