@@ -39,6 +39,7 @@ yay:
   dmidecode:
   upower:
   bolt:
+  throttled:
 
   # terminal
   fish:
