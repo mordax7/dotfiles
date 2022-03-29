@@ -29,7 +29,7 @@ output "DP-1" {
 }
 
 output * {
-    bg "#222222" solid_color
+    bg "#1a1c1c" solid_color
 }
 
 # Gaps
@@ -80,10 +80,10 @@ for_window    [app_id="mpv"]                             	    floating enable, r
 # Color scheme (Gruvbox dark)
 set $color_normal_white  #a89984
 set $color_bright_white  #ebdbb2
-set $color_normal_gray   #222222
+set $color_normal_gray   #282828
 set $color_bright_gray   #3c3836
 set $color_bright_yellow #d79921
-set $color_normal_black  #282828
+set $color_normal_black  #1d2021
 set $color_unused        #ff0000
 
 # Colors                  border                 background             text                   indicator            child_border
