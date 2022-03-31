@@ -72,6 +72,7 @@ for_window    [app_id="kitty"]                                  move container t
 for_window    [title="meet.google.com is sharing your screen."] floating enable
 for_window    [app_id="dmenu.*"]                                floating enable, resize set width 60ppt height 80ppt
 for_window    [app_id="dmenu-browser"]                          resize set height 20ppt
+for_window    [app_id="dmenu-emoji"]                            resize set height 20ppt
 for_window    [app_id="dmenu-calc"]                             resize set width 40ppt height 30ppt
 for_window    [app_id="qalculate-gtk"]                          floating enable
 for_window    [app_id="ranger"]                                 floating enable
@@ -170,18 +171,19 @@ bindsym --to-code {
     $win+Shift+Return exec kitty --config NONE /bin/bash
 
     # Launcher
-    $hyper+equal    exec bash -c "cgkill qalculate-gtk || qalculate-gtk"
-    $hyper+d        fullscreen disable, exec cglaunch wofi
-    $hyper+p        fullscreen disable, exec "wl-clipboard-manager lock; cglaunch gopass ls --flat | wofi --dmenu | xargs --no-run-if-empty gopass show -c; wl-clipboard-manager unlock"
-    $hyper+u        fullscreen disable, exec "wl-clipboard-manager lock; cglaunch gopass ls --flat | wofi --dmenu | xargs -I _ --no-run-if-empty gopass show -c _ username; wl-clipboard-manager unlock"
-    $hyper+a        fullscreen disable, exec "wl-clipboard-manager lock; cglaunch ykman oath accounts list | wofi --dmenu | xargs -I _ --no-run-if-empty ykman oath accounts code _ -s | wl-copy; wl-clipboard-manager unlock"
-    $hyper+m        fullscreen disable, exec cglaunch udiskie-dmenu
-    $win+grave      fullscreen disable, exec cglaunch wl-clipboard-manager dmenu
-    Print           exec cglaunch sway-screenshot-area
-    $hyper+Print    exec cglaunch sway-gif-area
-    $win+Print      exec cglaunch sway-screenshare
-    $hyper+n        fullscreen disable, exec "cglaunch dmenu && cgkill dmenu || networkmanager_dmenu"
-    $win+f          fullscreen disable, exec "cglaunch --term ranger"
+    $hyper+equal      exec bash -c "cgkill qalculate-gtk || qalculate-gtk"
+    $hyper+d          fullscreen disable, exec cglaunch wofi
+    $hyper+p          fullscreen disable, exec "wl-clipboard-manager lock; cglaunch gopass ls --flat | wofi --dmenu | xargs --no-run-if-empty gopass show -c; wl-clipboard-manager unlock"
+    $hyper+u          fullscreen disable, exec "wl-clipboard-manager lock; cglaunch gopass ls --flat | wofi --dmenu | xargs -I _ --no-run-if-empty gopass show -c _ username; wl-clipboard-manager unlock"
+    $hyper+a          fullscreen disable, exec "wl-clipboard-manager lock; cglaunch ykman oath accounts list | wofi --dmenu | xargs -I _ --no-run-if-empty ykman oath accounts code _ -s | wl-copy; wl-clipboard-manager unlock"
+    $hyper+m          fullscreen disable, exec cglaunch udiskie-dmenu
+    $win+grave        fullscreen disable, exec cglaunch wl-clipboard-manager dmenu
+    $hyper+Backspace  fullscreen disable, exec cglaunch emoji-dmenu
+    Print             exec cglaunch sway-screenshot-area
+    $hyper+Print      exec cglaunch sway-gif-area
+    $win+Print        exec cglaunch sway-screenshare
+    $hyper+n          fullscreen disable, exec "cglaunch dmenu && cgkill dmenu || networkmanager_dmenu"
+    $win+f            fullscreen disable, exec "cglaunch --term ranger"
 
     # Kill focused window
     $win+q kill
