@@ -51,7 +51,7 @@ yay:
 
   # passwords
   gopass:
-  gopass-jsonapi-git:
+  gopass-jsonapi:
 
   # files
   ranger:
