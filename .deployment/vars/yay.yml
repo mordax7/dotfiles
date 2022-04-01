@@ -96,7 +96,7 @@ yay:
   vulkan-headers:
   flashfocus-git:
   qt5-wayland:
-  wofi:
+  wldash:
 
   # audio
   pipewire-pulse:

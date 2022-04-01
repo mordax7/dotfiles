@@ -172,10 +172,10 @@ bindsym --to-code {
 
     # Launcher
     $hyper+equal      exec bash -c "cgkill qalculate-gtk || qalculate-gtk"
-    $hyper+d          fullscreen disable, exec cglaunch wofi
-    $hyper+p          fullscreen disable, exec "wl-clipboard-manager lock; cglaunch gopass ls --flat | wofi --dmenu | xargs --no-run-if-empty gopass show -c; wl-clipboard-manager unlock"
-    $hyper+u          fullscreen disable, exec "wl-clipboard-manager lock; cglaunch gopass ls --flat | wofi --dmenu | xargs -I _ --no-run-if-empty gopass show -c _ username; wl-clipboard-manager unlock"
-    $hyper+a          fullscreen disable, exec "wl-clipboard-manager lock; cglaunch ykman oath accounts list | wofi --dmenu | xargs -I _ --no-run-if-empty ykman oath accounts code _ -s | wl-copy; wl-clipboard-manager unlock"
+    $hyper+d          fullscreen disable, exec cglaunch wldash
+    $hyper+p          fullscreen disable, exec "wl-clipboard-manager lock; cglaunch gopass ls --flat | dmenu | xargs --no-run-if-empty gopass show -c; wl-clipboard-manager unlock"
+    $hyper+u          fullscreen disable, exec "wl-clipboard-manager lock; cglaunch gopass ls --flat | dmenu | xargs -I _ --no-run-if-empty gopass show -c _ username; wl-clipboard-manager unlock"
+    $hyper+a          fullscreen disable, exec "wl-clipboard-manager lock; cglaunch ykman oath accounts list | dmenu | xargs -I _ --no-run-if-empty ykman oath accounts code _ -s | wl-copy; wl-clipboard-manager unlock"
     $hyper+m          fullscreen disable, exec cglaunch udiskie-dmenu
     $win+grave        fullscreen disable, exec cglaunch wl-clipboard-manager dmenu
     $hyper+Backspace  fullscreen disable, exec cglaunch emoji-dmenu
