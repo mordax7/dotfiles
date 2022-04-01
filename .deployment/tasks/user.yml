@@ -1,5 +1,5 @@
 ---
-- name: Enable user services
+- name: enable user services
   systemd:
     name: "{{ item }}"
     enabled: yes
@@ -18,54 +18,28 @@
     - "mako.service"
     - "systemd-tmpfiles-setup.service"
     - "battery-low-notify.service"
-  tags:
-    - systemd
 
-- name: Install personal key and set trust level 5
+- name: install personal key and set trust level 5
   gpg_key:
     fpr: 7E2A21F965AD08B06B6924881C64943243A3151D
     keyserver: keys.openpgp.org
     trust: '5'
-  tags:
-    - gpg
 
-- name: Install office key and set trust level 5
+- name: install office key and set trust level 5
   gpg_key:
     file: "/run/media/aljaz/wrk-stick/work/gpg/office.gpg"
     trust: '5'
-  tags:
-    - gpg
 
-- name: Creates Yubico dotfiles directory
+- name: creates Yubico dotfiles directory
   file:
     path: "{{ ansible_user_dir }}/.config/Yubico"
     state: directory
-  tags:
-    - yubico
 
-- name: Check if Yubico dotfiles are present
+- name: check if Yubico dotfiles are present
   stat:
     path: "{{ ansible_user_dir }}/.config/Yubico/u2f_keys"
   register: yubico_key_status
-  tags:
-    - yubico
 
-- name: Configuring YubiKey for passwordless sudo (touch it now)
+- name: configuring YubiKey for passwordless sudo (touch it now)
   shell: "pamu2fcfg -u{{ ansible_user_id }} > {{ ansible_user_dir }}/.config/Yubico/u2f_keys"
   when: not yubico_key_status.stat.exists
-  tags:
-    - yubico
-
-- name: Check if office VPN is present
-  stat:
-    path: "/etc/NetworkManager/system-connections/office.nmconnection"
-  become: true
-  register: office_vpn_status
-  tags:
-    - vpn
-
-- name: Import the Office VPN settings if it dont exists yet
-  shell: "nmcli connection import type openvpn file /run/media/aljaz/wrk-stick/work/vpn/office/office.ovpn"
-  when: not office_vpn_status.stat.exists
-  tags:
-    - vpn

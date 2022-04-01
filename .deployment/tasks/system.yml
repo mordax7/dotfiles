@@ -1,6 +1,6 @@
 ---
 # Fonts: http://input.fontbureau.com/download/?customize&fontSelection=fourStyleFamily&regular=InputMonoNarrow-Regular&italic=InputMonoNarrow-Italic&bold=InputMonoNarrow-Bold&boldItalic=InputMonoNarrow-BoldItalic&a=0&g=0&i=serifs_round&l=serifs_round&zero=slash&asterisk=height&braces=0&preset=default&line-height=1.1&email=
-- name: Creates system directories
+- name: creates system directories
   file:
     path: "{{ item }}"
     state: directory
@@ -37,13 +37,8 @@
     - { src: 'files/etc/fonts/conf.d/75-joypixels.conf', dest: '/etc/fonts/conf.d/75-joypixels.conf' }
     - { src: 'files/etc/systemd/journald.conf.d/override.conf', dest: '/etc/systemd/journald.conf.d/override.conf' }
     - { src: 'files/etc/systemd/logind.conf.d/override.conf', dest: '/etc/systemd/logind.conf.d/override.conf' }
-  tags:
-    - bluetooth
-    - reflector
-    - network
-    - pacman
 
-- name: Enable system services
+- name: enable system services
   systemd:
     name: "{{ item }}"
     enabled: yes
@@ -54,24 +49,30 @@
     - "tlp.service"
     - "reflector.timer"
     - "pcscd.service"
-  tags:
-    - network
-    - bluetooth
-    - docker
-    - tlp
-    - reflector
 
 - name: ensure group "docker" exists
   group:
     name: docker
     state: present
-  tags:
-    - docker
 
 - name: add {{ ansible_user_id }} to "docker" group
   user:
     name: "{{ ansible_user_id }}"
     groups: docker
     append: yes
-  tags:
-    - docker
+
+- name: check if office VPN is present
+  stat:
+    path: "/etc/NetworkManager/system-connections/office.nmconnection"
+  register: office_vpn_status
+
+- name: import the Office VPN settings if it dont exists yet
+  shell: "nmcli connection import type openvpn file /run/media/aljaz/wrk-stick/work/vpn/office/office.ovpn"
+  when: not office_vpn_status.stat.exists
+
+- name: Recursively change ownership of the Intellij directory
+  file:
+    path: /opt/intellij-idea-ultimate-edition
+    state: directory
+    recurse: yes
+    owner: "{{ ansible_user_id }}"
