@@ -17,6 +17,7 @@
   loop:
     - { src: 'files/etc/usbguard/usbguard-daemon.conf', dest: '/etc/usbguard/usbguard-daemon.conf' }
     - { src: 'files/etc/systemd/system/usbguard.service.d/override.conf', dest: '/etc/systemd/system/usbguard.service.d/override.conf' }
+    - { src: 'files/etc/nftables.conf', dest: '/etc/nftables.conf' }
 
 - name: Check if usbguard rules exist
   stat:
@@ -42,3 +43,4 @@
   loop:
     - "usbguard.service"
     - "usbguard-dbus.service"
+    - "nftables.service"
