@@ -1,6 +1,6 @@
 ---
-- name: Creates system directories
-  file:
+- name: creates system directories
+  ansible.builtin.file:
     path: "{{ item }}"
     state: directory
   loop:
@@ -15,32 +15,121 @@
     mode: 0644
     remote_src: yes
   loop:
-    - { src: 'files/etc/usbguard/usbguard-daemon.conf', dest: '/etc/usbguard/usbguard-daemon.conf' }
     - { src: 'files/etc/systemd/system/usbguard.service.d/override.conf', dest: '/etc/systemd/system/usbguard.service.d/override.conf' }
+    - { src: 'files/etc/pam.d/polkit-1', dest: '/etc/pam.d/polkit-1' }
     - { src: 'files/etc/nftables.conf', dest: '/etc/nftables.conf' }
+    - { src: 'files/etc/pam.d/sudo', dest: '/etc/pam.d/sudo' }
 
-- name: Check if usbguard rules exist
+- name: copy usbguard-daemon.conf configuration
+  copy:
+    src: 'files/etc/usbguard/usbguard-daemon.conf'
+    dest: '/etc/usbguard/usbguard-daemon.conf'
+    owner: root
+    group: root
+    mode: 0600
+    remote_src: yes
+
+- name: check if usbguard rules exist
   stat:
     path: "/etc/usbguard/rules.conf"
   register: usbguard_rules_status
 
-- name: Generate usbguard rules if they do not exist
+- name: generate usbguard rules if they do not exist
   shell: "usbguard generate-policy > /etc/usbguard/rules.conf"
   when: not usbguard_rules_status.stat.exists
 
-- name: Change usbguard config files permissions
+- name: change config files permissions
   ansible.builtin.file:
     path: "{{ item.path }}"
     mode: "0600"
   loop:
-    - { path: '/etc/usbguard/rules.conf' }
     - { path: '/etc/usbguard/usbguard-daemon.conf' }
+    - { path: '/etc/usbguard/rules.conf' }
+    - { path: '/etc/ssh/sshd_config' }
+    - { path: '/etc/at.deny' }
 
-- name: Enable system services
+- name: enable system services
   systemd:
     name: "{{ item }}"
     enabled: yes
   loop:
-    - "usbguard.service"
     - "usbguard-dbus.service"
+    - "usbguard.service"
     - "nftables.service"
+
+# https://cisofy.com/lynis/controls/KRNL-5820/
+- name: disable core dumps
+  community.general.pam_limits:
+    domain: '*'
+    limit_type: hard
+    limit_item: core
+    value: 0
+
+# https://cisofy.com/lynis/controls/NETW-3200/
+- name: check if blacklist.conf exists
+  stat:
+    path: "/etc/usbguard/rules.conf"
+  register: blacklist_conf
+
+- name: create system files
+  ansible.builtin.file:
+    path: /etc/modprobe.d/blacklist.conf
+    state: touch
+    mode: 644
+  when: not blacklist_conf.stat.exists
+
+- name: disable unused protocols
+  block:
+    - name: Prevent module from being loaded
+      ansible.builtin.copy:
+        dest: "/etc/modprobe.d/{{ item }}.conf"
+        content: "install {{ item }} /bin/true"
+        owner: root
+        group: root
+        mode: "0644"
+      loop:
+        - dccp
+        - sctp
+        - rds
+        - tipc
+        - firewire-core
+
+    - name: blacklist modules
+      ansible.builtin.lineinfile:
+        dest: /etc/modprobe.d/blacklist.conf
+        state: present
+        regex: "^blacklist {{ item }}$"
+        line: "blacklist {{ item }}"
+      loop:
+        - dccp
+        - sctp
+        - rds
+        - tipc
+        - firewire-core
+
+- name: Configure logins.def
+  ansible.builtin.lineinfile:
+    path: /etc/login.defs
+    state: present
+    regexp: "^{{ item.key | upper }}"
+    line: "{{ item.key | upper }} {{ item.value }}"
+  loop: "{{ items | dict2items }}"
+  vars:
+    items:
+      # https://cisofy.com/lynis/controls/AUTH-9328/
+      umask: "027"
+      # https://cisofy.com/lynis/controls/AUTH-9230/
+      sha_crypt_min_rounds: "5000"
+      sha_crypt_max_rounds: "5000"
+
+- name: Configure profile
+  ansible.builtin.lineinfile:
+    path: /etc/profile
+    state: present
+    regexp: "^{{ item.key }}"
+    line: "{{ item.key }} {{ item.value }}"
+  loop: "{{ items | dict2items }}"
+  vars:
+    items:
+      # https://cisofy.com/lynis/controls/AUTH-9328/
+      umask: "027"
