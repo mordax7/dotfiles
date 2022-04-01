@@ -184,9 +184,11 @@ yay:
   swappy:
   wf-recorder:
   v4l2loopback-dkms:
+
+  # media
   xdg-desktop-portal-wlr:
   libpipewire02:
-  pipewire-media-session:
+  wireplumber:
 
   # kubernetes
   kubectl:
