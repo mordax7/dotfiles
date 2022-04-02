@@ -1,6 +1,6 @@
 [Desktop Entry]
 Categories=Network;
-Exec=/home/aljaz/.local/bin-private/scli %u
+Exec=/usr/bin/scli %u
 GenericName=Signal CLI
 Icon=/usr/share/icons/hicolor/128x128/apps/signal-desktop.png
 Name=scli
