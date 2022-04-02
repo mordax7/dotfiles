@@ -80,7 +80,7 @@
 
 - name: disable unused protocols
   block:
-    - name: Prevent module from being loaded
+    - name: prevent module from being loaded
       ansible.builtin.copy:
         dest: "/etc/modprobe.d/{{ item }}.conf"
         content: "install {{ item }} /bin/true"
@@ -107,7 +107,7 @@
         - tipc
         - firewire-core
 
-- name: Configure logins.def
+- name: configure logins.def
   ansible.builtin.lineinfile:
     path: /etc/login.defs
     state: present
@@ -122,7 +122,8 @@
       sha_crypt_min_rounds: "5000"
       sha_crypt_max_rounds: "5000"
 
-- name: Configure profile
+# https://cisofy.com/lynis/controls/AUTH-9328/
+- name: configure profile
   ansible.builtin.lineinfile:
     path: /etc/profile
     state: present
@@ -131,5 +132,4 @@
   loop: "{{ items | dict2items }}"
   vars:
     items:
-      # https://cisofy.com/lynis/controls/AUTH-9328/
       umask: "027"
