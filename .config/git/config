@@ -1,9 +1,78 @@
-# ----------------------- U S E R -----------------------
-[user]
-    name = Aljaz Gantar
-    email = gantar.aljaz94@gmail.com
+[advice]
+	detachedHead = false
 
-# ---------------------- M E R G E ----------------------
+[branch]
+	autosetuprebase = always
+
+[color "branch"]
+	current = green reverse
+	local = green
+	remote = yellow
+
+[color "status"]
+	added = green
+	changed = yellow
+	untracked = blue
+
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+
+[color "diff"]
+	meta = 11
+	frag = magenta bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+
+[core]
+	autocrlf = input
+	excludesfile = ~/.config/git/ignore
+	untrackedCache = true
+	editor = nvim
+
+[diff]
+    guitool = intellij
+
+[difftool "intellij"]
+    cmd = /usr/bin/intellij-idea-ultimate-edition diff $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE")
+
+[diff "gpg"]
+	binary = true
+	textconv = gpg --decrypt --quiet --yes --compress-algo=none --no-encrypt-to --batch --use-agent
+
+[delta]
+	features = hyperlinks
+	width = 1
+	minus-emph-style = syntax bold "#780000"
+	minus-style = syntax "#400000"
+	plus-emph-style = syntax bold "#007800"
+	plus-style = syntax "#004000"
+	hunk-header-style = syntax italic "#303030"
+	hunk-header-decoration-style = omit
+	file-style = yellow bold
+	file-decoration-style = yellow ul
+	file-added-label = [+]
+	file-copied-label = [C]
+	file-modified-label = [M]
+	file-removed-label = [-]
+	file-renamed-label = [R]
+
+[init]
+	defaultBranch = main
+
+[interactive]
+	diffFilter = delta --color-only
+
+[pager]
+	diff = delta
+	log = delta
+	reflog = delta
+	show = delta
+
 [merge]
     tool = intellij
 
@@ -17,30 +86,34 @@
     # don't create backup *.orig files
     keepBackup = false
 
-# --------------------- B R A N C H ---------------------
-[init]
-    defaultBranch = main
+[credential]
+    helper = cache --timeout 28800
+
+[push]
+	default = current
+
+[pull]
+    ff = only
+
+[rebase]
+	autostash = true
+	autosquash = true
 
 [remote "origin"]
 	fetch = +refs/pull/*/head:refs/remotes/origin/pr/*
 
-# ----------------------- D I F F -----------------------
-[diff]
-    guitool = intellij
-[difftool "intellij"]
-    cmd = /usr/bin/intellij-idea-ultimate-edition diff $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE")
-[core]
-    autocrlf = input
-    editor = nvim
+[user]
+	name = Aljaz Gantar
+	useConfigOnly = true
 
-# ---------------- C R E D E N T I A L S ----------------
-[credential]
-    helper = cache --timeout 28800
+[includeIf "gitdir:~/.projects/home/"]
+    path = ~/.projects/home/.gitconfig
 
-# ----------------------- P U L L -----------------------
-[pull]
-    ff = only
-
-# --------------------- C O N F I G ---------------------
 [includeIf "gitdir:~/.projects/work/"]
     path = ~/.projects/work/.gitconfig
+
+# Workaround for broken aur repos: https://exerror.com/fatal-remote-error-the-unauthenticated-git-protocol-on-port-9418-is-no-longer-supported/
+[url "https://github.com"]
+    insteadOf = git://github.com
+
+# vim:ft=ini
