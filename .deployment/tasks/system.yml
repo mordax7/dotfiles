@@ -55,10 +55,10 @@
     name: docker
     state: present
 
-- name: add {{ ansible_user_id }} to "docker" group
+- name: add {{ ansible_user_id }} to required groups
   user:
     name: "{{ ansible_user_id }}"
-    groups: docker
+    groups: docker,users,video,wheel
     append: yes
 
 - name: check if office VPN is present
