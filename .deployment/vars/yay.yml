@@ -200,6 +200,7 @@ yay:
   intel-media-driver:
 
   # security
+  arch-audit:
   pinentry:
   ccid:
   gcr:
@@ -211,6 +212,8 @@ yay:
   yubikey-manager:
   usbguard:
   nftables:
+  overdue:
+  checksec:
 
   # git
   git:
