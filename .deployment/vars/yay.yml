@@ -219,6 +219,7 @@ yay:
   git:
   meld:
   git-crypt:
+  git-delta:
 
   # misc
   dmenu-term:
