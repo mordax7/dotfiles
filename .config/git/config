@@ -104,6 +104,7 @@
 
 [user]
 	name = Aljaz Gantar
+	email = gantar.aljaz94@gmail.com
 	useConfigOnly = true
 
 [includeIf "gitdir:~/.projects/home/"]
