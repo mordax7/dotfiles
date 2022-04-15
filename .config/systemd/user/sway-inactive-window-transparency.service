@@ -6,6 +6,7 @@ After=graphical-session.target
 [Service]
 ExecStart=/usr/share/sway/scripts/inactive-windows-transparency.py -o 0.7
 Restart=always
+RestartSec=10s
 
 [Install]
 WantedBy=graphical-session.target
