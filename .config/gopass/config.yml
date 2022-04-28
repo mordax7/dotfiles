@@ -9,4 +9,4 @@ path: /home/aljaz/.local/share/gopass/stores/root
 safecontent: false
 mounts:
     lando: /home/aljaz/.local/share/gopass/stores/lando
-    lando-gopass: /home/aljaz/.local/share/gopass/stores/lando-gopass
+    lando-devel: /home/aljaz/.local/share/gopass/stores/lando-devel
