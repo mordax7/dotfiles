@@ -85,7 +85,6 @@ yay:
   waybar:
   xorg-server-xwayland:
   wl-clipboard:
-  wl-clipboard-manager:
   python-i3ipc:
   mako-git:
   gtk-theme-arc-gruvbox-git:
