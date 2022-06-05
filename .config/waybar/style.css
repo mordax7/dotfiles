@@ -48,7 +48,8 @@ window#waybar {
 #disk.warning,
 #memory.warning,
 #cpu.warning,
-#custom-dnd.on {
+#custom-dnd.dnd-notification,
+#custom-dnd.dnd-none {
     border-top: 3px solid @background;
     border-bottom: 3px solid @yellow;
 }

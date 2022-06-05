@@ -15,7 +15,7 @@
     - "wl-clipboard-manager.service"
     - "sway-autoname-workspaces.service"
     - "playerctld.service"
-    - "mako.service"
+    - "swaync.service"
     - "systemd-tmpfiles-setup.service"
     - "battery-low-notify.service"
     - "swayr.service"

@@ -86,7 +86,7 @@ yay:
   xorg-server-xwayland:
   wl-clipboard:
   python-i3ipc:
-  mako-git:
+  swaync:
   gtk-theme-arc-gruvbox-git:
   wlsunset-git:
   light:
