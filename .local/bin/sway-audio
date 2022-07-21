@@ -16,7 +16,7 @@ case "$1" in
         [ -n "$a2dp" ] && new=headset-head-unit-msbc || new=a2dp-sink-sbc
         pactl set-card-profile "$bt_card" "$new"
         ;;
-    bt-connect-headphones) bluetoothctl connect 28:9A:4B:25:18:C8 ;;
+    bt-connect-headphones) bluetoothctl connect 70:26:05:3C:56:A7 ;;
     bt-disconnect)         bluetoothctl disconnect ;;
     headphones-internal)   pactl set-default-sink  alsa_output.pci-0000_00_1f.3.analog-stereo && pactl set-default-source alsa_input.pci-0000_00_1f.3.analog-stereo && pactl set-sink-port alsa_output.pci-0000_00_1f.3.analog-stereo analog-output-headphones && pactl set-source-port alsa_input.pci-0000_00_1f.3.analog-stereo analog-input-headset-mic ;;
     analog-internal)       pactl set-default-sink  alsa_output.pci-0000_00_1f.3.analog-stereo && pactl set-default-source alsa_input.pci-0000_00_1f.3.analog-stereo && pactl set-sink-port alsa_output.pci-0000_00_1f.3.analog-stereo analog-output-speaker && pactl set-source-port alsa_input.pci-0000_00_1f.3.analog-stereo analog-input-internal-mic;;
