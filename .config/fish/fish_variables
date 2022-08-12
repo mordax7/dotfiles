@@ -28,10 +28,11 @@ SETUVAR _fish_abbr_top:bpytop
 SETUVAR _fish_abbr_ts:todoist\x2dcli\x20sync
 SETUVAR _fish_abbr_upgrade:topgrade
 SETUVAR _fish_abbr_vim:nvim
-SETUVAR _fisher_evanlucas_2F_fish_2D_kubectl_2D_completions_files:/home/aljaz/\x2econfig/fish/completions/kubectl\x2efish
-SETUVAR _fisher_jorgebucaran_2F_fisher_files:/home/aljaz/\x2econfig/fish/functions/fisher\x2efish\x1e/home/aljaz/\x2econfig/fish/completions/fisher\x2efish
-SETUVAR _fisher_mordax7_2F_fish_2D_fzf_2D_todoist_files:/home/aljaz/\x2econfig/fish/functions/fzf_todoist_close\x2efish\x1e/home/aljaz/\x2econfig/fish/functions/fzf_todoist_date\x2efish\x1e/home/aljaz/\x2econfig/fish/functions/fzf_todoist_delete\x2efish\x1e/home/aljaz/\x2econfig/fish/functions/fzf_todoist_item\x2efish\x1e/home/aljaz/\x2econfig/fish/functions/fzf_todoist_labels\x2efish\x1e/home/aljaz/\x2econfig/fish/functions/fzf_todoist_open\x2efish\x1e/home/aljaz/\x2econfig/fish/functions/fzf_todoist_project\x2efish\x1e/home/aljaz/\x2econfig/fish/functions/fzf_todoist_quick_add\x2efish
+SETUVAR _fisher_evanlucas_2F_fish_2D_kubectl_2D_completions_files:\x7e/\x2econfig/fish/completions/kubectl\x2efish
+SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fish/functions/fisher\x2efish\x1e\x7e/\x2econfig/fish/completions/fisher\x2efish
+SETUVAR _fisher_mordax7_2F_fish_2D_fzf_2D_todoist_files:\x7e/\x2econfig/fish/functions/fzf_todoist_close\x2efish\x1e\x7e/\x2econfig/fish/functions/fzf_todoist_date\x2efish\x1e\x7e/\x2econfig/fish/functions/fzf_todoist_delete\x2efish\x1e\x7e/\x2econfig/fish/functions/fzf_todoist_item\x2efish\x1e\x7e/\x2econfig/fish/functions/fzf_todoist_labels\x2efish\x1e\x7e/\x2econfig/fish/functions/fzf_todoist_open\x2efish\x1e\x7e/\x2econfig/fish/functions/fzf_todoist_project\x2efish\x1e\x7e/\x2econfig/fish/functions/fzf_todoist_quick_add\x2efish
 SETUVAR _fisher_plugins:jorgebucaran/fisher\x1eevanlucas/fish\x2dkubectl\x2dcompletions\x1emordax7/fish\x2dfzf\x2dtodoist
+SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:005fd7
