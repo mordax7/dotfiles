@@ -19,6 +19,7 @@
     - "systemd-tmpfiles-setup.service"
     - "battery-low-notify.service"
     - "swayr.service"
+    - "flashfocus.service"
 
 - name: install personal key and set trust level 5
   gpg_key:
