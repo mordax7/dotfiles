@@ -1,4 +1,3 @@
-# test
 input type:keyboard {
 	xkb_layout de-hyper,us,si(us)
 	xkb_options grp:shifts_toggle,caps:hyper
