@@ -14,6 +14,7 @@ case "$1" in
         org="$(todoist-cli list | grep "@organisation" | grep -c "$(LC_TIME=en_US.utf8 date '+%y/%m/%d(%a)')")"
         proj="$(todoist-cli list | grep "@projects" | grep -c "$(LC_TIME=en_US.utf8 date '+%y/%m/%d(%a)')")"
         oneoff="$(todoist-cli list | grep "#One off tasks" | grep -c "$(LC_TIME=en_US.utf8 date '+%y/%m/%d(%a)')")"
+        inbox="$(todoist-cli list | grep "#Inbox" | grep -c "$(LC_TIME=en_US.utf8 date '+%y/%m/%d(%a)')")"
         work="$(todoist-cli list | grep "@work" | grep -c "$(LC_TIME=en_US.utf8 date '+%y/%m/%d(%a)')")"
 
         text=""
@@ -24,6 +25,12 @@ case "$1" in
         else
           [ -n "$text" -o -n "$work" ] && text="/${work}${text}"
           [ -n "$work" ]               && tooltip="work: $work\n\n${tooltip}"
+        fi
+        if [ "$inbox" -eq 0 ]; then
+          unset inbox
+        else
+          [ -n "$text" -o -n "$inbox" ] && text="/${inbox}${text}"
+          [ -n "$inbox" ]               && tooltip="inbox: $inbox\n\n${tooltip}"
         fi
         if [ "$oneoff" -eq 0 ]; then
           unset oneoff
