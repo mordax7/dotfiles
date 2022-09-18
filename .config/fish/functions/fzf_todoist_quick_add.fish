@@ -1,4 +1,4 @@
-function todoist_quick_add
+function fzf_todoist_quick_add
   read -P 'Name of the task: ' name
   if [ $name ]
     todoist-cli quick $name
