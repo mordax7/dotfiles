@@ -1,0 +1,61 @@
+#!/bin/sh
+
+cache_path="${XDG_CACHE_HOME:-$HOME/.cache}/waybar-todoist"
+
+case "$1" in
+    show)
+        if [ -f "$cache_path" ]; then
+            cat "$cache_path"
+        else
+            printf '{"text": "waybar-todoist cache is missing"}\n'
+        fi
+        ;;
+    refresh)
+        org="$(todoist-cli list | grep "@organisation" | grep -c "$(LC_TIME=en_US.utf8 date '+%y/%m/%d(%a)')")"
+        proj="$(todoist-cli list | grep "@projects" | grep -c "$(LC_TIME=en_US.utf8 date '+%y/%m/%d(%a)')")"
+        oneoff="$(todoist-cli list | grep "#One off tasks" | grep -c "$(LC_TIME=en_US.utf8 date '+%y/%m/%d(%a)')")"
+        work="$(todoist-cli list | grep "@work" | grep -c "$(LC_TIME=en_US.utf8 date '+%y/%m/%d(%a)')")"
+
+        text=""
+        tooltip=""
+
+        if [ "$work" -eq 0 ]; then
+          unset work
+        else
+          [ -n "$text" -o -n "$work" ] && text="/${work}${text}"
+          [ -n "$work" ]               && tooltip="work: $work\n\n${tooltip}"
+        fi
+        if [ "$oneoff" -eq 0 ]; then
+          unset oneoff
+        else
+          [ -n "$text" -o -n "$oneoff" ] && text="/${oneoff}${text}"
+          [ -n "$oneoff" ]               && tooltip="one off tasks: $oneoff\n\n${tooltip}"
+        fi
+        if [ "$proj" -eq 0 ]; then
+          unset proj;
+        else
+          [ -n "$text" -o -n "$proj" ] && text="/${proj}${text}"
+          [ -n "$proj" ]               && tooltip="projects: $proj\n\n${tooltip}"
+        fi
+        if [ "$org" -eq 0 ]; then
+          unset org
+        else
+          [ -n "$text" -o -n "$org" ] && text="${org}${text}"
+          [ -n "$org" ]               && tooltip="organisation: $org\n\n${tooltip}"
+        fi
+
+        tooltip="$(printf "$tooltip" | perl -pe 's/\n/\\n/g' | perl -pe 's/(?:\\n)+$//')"
+
+        if [ -z "$text" ]; then
+            printf '{"text": ""}\n' > "$cache_path"
+        else
+            printf "{\"text\": \"<span foreground='#928374'></span> %s\", \"tooltip\": \"%s\" }\n" "$text" "$tooltip" > "$cache_path"
+        fi
+
+        pkill -RTMIN+1 -x waybar
+        ;;
+    *)
+        echo >&2 "Usage: $0 <show|refresh>"
+        exit 1
+        ;;
+esac

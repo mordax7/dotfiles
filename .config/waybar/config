@@ -10,6 +10,7 @@
         "custom/usbguard",
         "custom/yubikey",
         "custom/systemd",
+        "custom/todoist",
         "custom/recording",
         "custom/dnd",
         "pulseaudio",
@@ -44,6 +45,13 @@
         "exec": "waybar-systemd",
         "return-type": "json",
         "interval": 10
+    },
+    "custom/todoist": {
+        "exec": "waybar-todoist show",
+        "return-type": "json",
+        "signal": 1,
+        "on-click-right": "waybar-todoist refresh",
+        "interval": "once"
     },
     "custom/vpn": {
         "format": "{}",
