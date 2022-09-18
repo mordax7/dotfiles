@@ -3,5 +3,6 @@ function fzf_todoist_delete
   if [ $ret ]
     todoist-cli delete $ret
     commandline -f repaint
+    waybar-todoist refresh
   end
 end

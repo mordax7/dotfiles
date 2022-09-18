@@ -3,5 +3,6 @@ function fzf_todoist_close
   if [ $ret ]
     todoist-cli close $ret
     commandline -f repaint
+    waybar-todoist refresh
   end
 end
