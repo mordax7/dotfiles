@@ -10,5 +10,5 @@ function fish_user_key_bindings
     bind -M insert \etd fzf_todoist_delete
     bind -M insert \eto fzf_todoist_open
     bind -M insert \ett fzf_todoist_date
-    bind -M insert \etq todoist_quick_add
+    bind -M insert \etq fzf_todoist_quick_add
 end
