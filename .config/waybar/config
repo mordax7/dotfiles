@@ -32,6 +32,10 @@
         "interval": 1
     },
     "custom/usbguard": {
+        "format-icons": {
+            "icon": "<span foreground='#928374'> </span>"
+        },
+        "format": "{icon}{}",
         "exec": "waybar-usbguard",
         "return-type": "json",
         "on-click": "waybar-usbguard allow",
@@ -47,6 +51,10 @@
         "interval": 10
     },
     "custom/todoist": {
+        "format-icons": {
+            "icon": "<span foreground='#928374'> </span>"
+        },
+        "format": "{icon}{}",
         "exec": "waybar-todoist show",
         "return-type": "json",
         "signal": 1,
@@ -111,7 +119,7 @@
     },
     "sway/language": {
         "format": "<span foreground='#928374'></span> {}",
-        "min-length": 5,
+        "min-length": 5
     },
     "battery": {
         "states": {

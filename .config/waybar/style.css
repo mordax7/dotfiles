@@ -1,10 +1,12 @@
 @define-color background #1d2021;
 @define-color foreground #ebdbb2;
+@define-color dim        #928374;
 @define-color yellow     #fabd2f;
 @define-color red        #fb4934;
 @define-color green      #b8bb26;
 
 * {
+    background: @background;
     border: none;
     border-radius: 0;
     font-family: Input, "Font Awesome 6 Free Solid";
@@ -61,6 +63,10 @@ window#waybar {
 #memory.critical,
 #cpu.critical,
 #custom-yubikey,
+#custom-recording {
+    border-top: 3px solid @background;
+    border-bottom: 3px solid @red;
+}
 
 #battery.charging {
     border-top: 3px solid @background;
@@ -94,4 +100,29 @@ window#waybar {
 
 #tray {
     margin-left: -1000000px;
+}
+
+#backlight,
+#battery,
+#clock,
+#cpu,
+#custom-recording,
+#custom-systemd,
+#custom-todoist,
+#custom-usbguard,
+#custom-yubikey,
+#disk,
+#memory,
+#mode,
+#network,
+#pulseaudio {
+    color: @foreground;
+}
+
+#custom-vpn {
+    color: @dim;
+}
+
+#language {
+    color: @foreground;
 }
