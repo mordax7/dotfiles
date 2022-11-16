@@ -32,7 +32,6 @@ yay:
   reflector:
 
   # hardware
-  dell-command-configure:
   fwupd:
   tlp:
   acpi:
