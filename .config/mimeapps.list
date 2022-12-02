@@ -25,7 +25,7 @@ x-scheme-handler/about=browser.desktop
 x-scheme-handler/http=browser.desktop
 x-scheme-handler/https=browser.desktop
 x-scheme-handler/unknown=browser.desktop
-x-scheme-handler/tg=userapp-Telegram Desktop-OGPTW0.desktop
+x-scheme-handler/tg=userapp-Telegram Desktop-ZM68V1.desktop
 
 [Added Associations]
-x-scheme-handler/tg=userapp-Telegram Desktop-OGPTW0.desktop;
+x-scheme-handler/tg=userapp-Telegram Desktop-OGPTW0.desktop;userapp-Telegram Desktop-ZM68V1.desktop;
