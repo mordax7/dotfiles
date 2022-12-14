@@ -322,7 +322,6 @@ bindsym --to-code {
 }
 
 exec_always "cggrep scli || cglaunch --term -o font_size=12 scli"
-exec_always "cglaunch telegram-desktop || telegram-desktop"
 
 # Load systemd integration
 include /etc/sway/config.d/*
