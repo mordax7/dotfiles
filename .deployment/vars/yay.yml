@@ -157,7 +157,7 @@ yay:
   go:
 
   # aws dev
-  aws-cli:
+  aws-cli-v2:
 
   # python dev
   python-pip:
@@ -185,7 +185,6 @@ yay:
 
   # media
   xdg-desktop-portal-wlr:
-  libpipewire02:
   wireplumber:
 
   # kubernetes
