@@ -79,9 +79,10 @@ yay:
   zip:
 
   # ui
-  sway:
-  swaylock-effects-git:
-  waybar:
+  hyprland:
+  hyprland-autoname-workspaces-git:
+  swaylock:
+  waybar-hyprland-git:
   xorg-server-xwayland:
   wl-clipboard:
   python-i3ipc:

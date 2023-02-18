@@ -1,7 +1,7 @@
 default partial alphanumeric_keys modifier_keys
 
 xkb_symbols "basic" {
-    include "de"
+    include "us"
 
     replace key <CAPS> { [ Hyper_L ] };
     replace key <LWIN> { [ Super_L ] };

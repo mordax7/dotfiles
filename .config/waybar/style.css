@@ -29,7 +29,7 @@ window#waybar {
     border-bottom: 3px solid transparent;
 }
 
-#workspaces button.focused {
+#workspaces button.active {
     border-bottom: 3px solid @green;
 }
 
@@ -37,9 +37,7 @@ window#waybar {
     border-bottom: 3px solid @yellow;
 }
 
-#mode {
-    background-color: @background;
-    border-top: 3px solid @background;
+#submap {
     border-bottom: 3px solid @red;
 }
 
@@ -73,7 +71,7 @@ window#waybar {
     border-bottom: 3px solid @green;
 }
 
-#mode,
+#submap,
 #pulseaudio,
 #custom-usbguard,
 #custom-yubikey,
@@ -106,6 +104,7 @@ window#waybar {
 #battery,
 #clock,
 #cpu,
+#custom-progress,
 #custom-recording,
 #custom-systemd,
 #custom-todoist,
@@ -113,7 +112,7 @@ window#waybar {
 #custom-yubikey,
 #disk,
 #memory,
-#mode,
+#submap,
 #network,
 #pulseaudio {
     color: @foreground;

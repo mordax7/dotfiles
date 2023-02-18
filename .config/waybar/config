@@ -2,8 +2,8 @@
     "layer": "top",
     "height": 25,
     "modules-left": [
-        "sway/workspaces",
-        "sway/mode"
+        "wlr/workspaces",
+        "hyprland/submap"
     ],
     "modules-right": [
         "custom/progress",
@@ -20,12 +20,16 @@
         "memory",
         "disk",
         "backlight",
-        "sway/language",
+        "hyprland/language",
         "battery",
-        "clock",
-        "tray"
+        "clock"
     ],
 
+    "wlr/workspaces": {
+         "sort-by-number": true,
+         "format": "{icon}",
+         "on-click": "activate"
+    },
     "custom/progress": {
         "exec": "waybar-progress",
         "return-type": "json",
@@ -117,9 +121,8 @@
         "format": "<span foreground='#928374'>{icon}</span> {percent}%",
         "format-icons": [""]
     },
-    "sway/language": {
-        "format": "<span foreground='#928374'></span> {}",
-        "min-length": 5
+    "hyprland/language": {
+        "min-length": 3,
     },
     "battery": {
         "states": {
@@ -155,7 +158,8 @@
             "car": "",
             "default": ["", "", ""]
         },
-        "on-click": "pavucontrol"
+        "on-click": "pavucontrol",
+        "on-click-right": "env LIBGL_ALWAYS_SOFTWARE=1 helvum"
     }
 }
 

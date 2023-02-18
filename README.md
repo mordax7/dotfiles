@@ -9,7 +9,7 @@ Enjoy.
 
 ## Some tools that I use:
 
-- [sway](https://github.com/swaywm/sway) (window manager) + [waybar](https://github.com/Alexays/Waybar) (status bar).
+- [Hyprland](hyprctl monitors -j) (window manager) + [waybar](https://github.com/Alexays/Waybar)
 - [kitty](https://github.com/kovidgoyal/kitty) - fast GPU-accelerated terminal.
 - [fish-shell](https://fishshell.com/) + [starship](https://starship.rs/) and various other plugins.
 - [yubikey-touch-detector](https://github.com/maximbaz/yubikey-touch-detector) - a tool that can detect when your
