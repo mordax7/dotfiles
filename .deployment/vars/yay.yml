@@ -8,7 +8,7 @@ yay:
   logrotate:
   man-pages:
   f2fs-tools:
-  bpytop:
+  btop:
 
   # base-devel
   posix:
