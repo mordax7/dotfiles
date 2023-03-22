@@ -104,7 +104,6 @@ yay:
   playerctl:
   bluez:
   bluez-utils:
-  bluez-hid2hci:
 
   # video
   mpv:

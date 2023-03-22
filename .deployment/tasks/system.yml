@@ -10,6 +10,13 @@
     - /etc/systemd/logind.conf.d
     - /etc/pacman.d/hooks
 
+- name: blacklist hci_uart module, Bluetooth workaround https://wiki.archlinux.org/title/Dell_XPS_13_(9310)#AX500_2
+  ansible.builtin.lineinfile:
+    dest: /etc/modprobe.d/blacklist.conf
+    state: present
+    regex: "^blacklist hci_uart$"
+    line: "blacklist hci_uart"
+
 - name: copy system level configuration
   copy:
     src: "{{ item.src }}"
@@ -22,6 +29,8 @@
     - { src: 'files/etc/bluetooth/main.conf', dest: '/etc/bluetooth/main.conf' }
     - { src: 'files/etc/systemd/system/reflector.service', dest: '/etc/systemd/system/reflector.service' }
     - { src: 'files/etc/systemd/system/reflector.timer', dest: '/etc/systemd/system/reflector.timer' }
+    - { src: 'files/etc/systemd/system/ath11k-resume.service', dest: '/etc/systemd/system/ath11k-resume.service' }
+    - { src: 'files/etc/systemd/system/ath11k-suspend.service ', dest: '/etc/systemd/system/ath11k-suspend.service ' }
     - { src: 'files/etc/pacman.d/hooks/mirrorlist.hook', dest: '/etc/pacman.d/hooks/mirrorlist.hook' }
     - { src: 'files/etc/pacman.conf', dest: '/etc/pacman.conf' }
     - { src: 'files/etc/modprobe.d/v4l2loopback.conf', dest: '/etc/modprobe.d/v4l2loopback.conf' }
@@ -49,6 +58,8 @@
     - "tlp.service"
     - "reflector.timer"
     - "pcscd.service"
+    - "ath11k-suspend.service"
+    - "ath11k-resume.service"
 
 - name: ensure group "docker" exists
   group:

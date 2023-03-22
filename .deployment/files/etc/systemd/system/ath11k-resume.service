@@ -1,0 +1,10 @@
+[Unit]
+Description=Resume: modprobe ath11k_pci
+After=suspend.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/modprobe ath11k_pci
+
+[Install]
+WantedBy=suspend.target
