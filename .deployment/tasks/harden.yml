@@ -16,6 +16,7 @@
     remote_src: yes
   loop:
     - { src: 'files/etc/systemd/system/usbguard.service.d/override.conf', dest: '/etc/systemd/system/usbguard.service.d/override.conf' }
+    - { src: 'files/etc/default/earlyoom', dest: '/etc/default/earlyoom' }
     - { src: 'files/etc/pam.d/polkit-1', dest: '/etc/pam.d/polkit-1' }
     - { src: 'files/etc/nftables.conf', dest: '/etc/nftables.conf' }
     - { src: 'files/etc/pam.d/sudo', dest: '/etc/pam.d/sudo' }
@@ -56,6 +57,7 @@
     - "usbguard-dbus.service"
     - "usbguard.service"
     - "nftables.service"
+    - "earlyoom.service"
 
 # https://cisofy.com/lynis/controls/KRNL-5820/
 - name: disable core dumps

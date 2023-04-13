@@ -214,6 +214,10 @@ yay:
   overdue:
   checksec:
 
+  # oom prevention
+  earlyoom:
+  systembus-notify:
+
   # git
   git:
   meld:

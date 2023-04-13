@@ -17,6 +17,7 @@
     - "swaync.service"
     - "systemd-tmpfiles-setup.service"
     - "battery-low-notify.service"
+    - "systembus-notify.service"
 
 - name: install personal key and set trust level 5
   gpg_key:
