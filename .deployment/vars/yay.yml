@@ -186,7 +186,7 @@ yay:
   v4l2loopback-dkms:
 
   # media
-  xdg-desktop-portal-wlr:
+  xdg-desktop-portal-hyprland:
   wireplumber:
 
   # kubernetes
