@@ -1,0 +1,17 @@
+[core]
+	parsing = true
+	autoclip = false
+	showsafecontent = false
+	cliptimeout = 45
+	autoimport = true
+	nopager = false
+	exportkeys = true
+	notifications = false
+[mounts]
+	path = /home/aljaz/.local/share/gopass/stores/root
+[age]
+	usekeychain = false
+[mounts "lando-devel"]
+	path = /home/aljaz/.local/share/gopass/stores/lando-devel
+[mounts "lando"]
+	path = /home/aljaz/.local/share/gopass/stores/lando
