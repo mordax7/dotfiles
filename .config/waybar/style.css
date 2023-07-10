@@ -60,6 +60,7 @@ window#waybar {
 #disk.critical,
 #memory.critical,
 #cpu.critical,
+#custom-eyes,
 #custom-yubikey,
 #custom-recording {
     border-top: 3px solid @background;
@@ -75,6 +76,7 @@ window#waybar {
 #pulseaudio,
 #custom-usbguard,
 #custom-yubikey,
+#custom-eyes,
 #custom-systemd,
 #custom-todoist,
 #network,
@@ -104,6 +106,7 @@ window#waybar {
 #battery,
 #clock,
 #cpu,
+#custom-eyes,
 #custom-progress,
 #custom-recording,
 #custom-systemd,
