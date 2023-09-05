@@ -2,7 +2,7 @@
     "layer": "top",
     "height": 25,
     "modules-left": [
-        "wlr/workspaces",
+        "hyprland/workspaces",
         "hyprland/submap"
     ],
     "modules-right": [
@@ -26,11 +26,7 @@
         "clock"
     ],
 
-    "wlr/workspaces": {
-         "sort-by-number": true,
-         "format": "{icon}",
-         "on-click": "activate"
-    },
+    "hyprland/workspaces": {},
     "custom/progress": {
         "exec": "waybar-progress",
         "return-type": "json",
