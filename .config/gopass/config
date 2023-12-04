@@ -1,7 +1,5 @@
 [core]
 	parsing = true
-	autoclip = false
-	showsafecontent = false
 	cliptimeout = 45
 	autoimport = true
 	nopager = false
@@ -15,3 +13,7 @@
 	path = /home/aljaz/.local/share/gopass/stores/lando-devel
 [mounts "lando"]
 	path = /home/aljaz/.local/share/gopass/stores/lando
+[show]
+	safecontent = false
+[generate]
+	autoclip = false
