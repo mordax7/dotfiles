@@ -227,8 +227,7 @@ yay:
   dmenu-term:
   qalculate-gtk:
   libreoffice-fresh:
-  signal-cli:
-  scli-git:
   jami-qt:
+  signal-desktop:
   topgrade:
   android-file-transfer:
