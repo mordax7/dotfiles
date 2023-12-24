@@ -26,7 +26,6 @@
     mode: 0644
     remote_src: yes
   loop:
-    - { src: 'files/etc/bluetooth/main.conf', dest: '/etc/bluetooth/main.conf' }
     - { src: 'files/etc/systemd/system/reflector.service', dest: '/etc/systemd/system/reflector.service' }
     - { src: 'files/etc/systemd/system/reflector.timer', dest: '/etc/systemd/system/reflector.timer' }
     - { src: 'files/etc/systemd/system/ath11k-resume.service', dest: '/etc/systemd/system/ath11k-resume.service' }
