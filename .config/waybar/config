@@ -26,7 +26,9 @@
         "clock"
     ],
 
-    "hyprland/workspaces": {},
+    "hyprland/workspaces": {
+         "format": "{name}"
+    },
     "custom/progress": {
         "exec": "waybar-progress",
         "return-type": "json",
