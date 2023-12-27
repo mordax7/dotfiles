@@ -23,9 +23,9 @@ source_directories:
 # list of plain path strings.
 repositories:
     - path: /run/media/aljaz/backup-storage-0/repos/aljaz/wrk-stick
-      label: backup-storage-0
+      label: backup-wrk-stick-0
     - path: /run/media/aljaz/backup-storage-1/repos/aljaz/wrk-stick
-      label: backup-storage-1
+      label: backup-wrk-stick-1
 
 # Working directory for the "borg create" command. Tildes are
 # expanded. Useful for backing up using relative paths. See
