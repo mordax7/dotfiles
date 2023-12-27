@@ -17,6 +17,13 @@
     regex: "^blacklist hci_uart$"
     line: "blacklist hci_uart"
 
+- name: set IDE property for hypr workaround https://github.com/hyprwm/Hyprland/issues/3450#issuecomment-1816761575
+  ansible.builtin.lineinfile:
+    dest: /opt/intellij-idea-ultimate-edition/bin/idea64.vmoptions
+    state: present
+    regex: "^suppress.focus.stealing=false$"
+    line: "-suppress.focus.stealing=false"
+
 - name: copy system level configuration
   copy:
     src: "{{ item.src }}"
