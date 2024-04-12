@@ -27,6 +27,7 @@ yay:
   pkgconf:
   texinfo:
   which:
+  debugedit:
 
   # other arch
   reflector:
