@@ -19,6 +19,16 @@ output "eDP-1" {
     subpixel rgb
 }
 
+output "LG Electronics LG Ultra HD 0x00068BD7" {
+    pos 0 0
+    scale 1.45
+    subpixel rgb
+}
+
+output "Ancor Communications Inc VG248 FCLMQS065236" {
+    subpixel rgb
+}
+
 output * {
     bg "#1a1c1c" solid_color
 }
@@ -312,9 +322,6 @@ bindsym --to-code {
 }
 
 exec_always "cggrep signal-desktop || cglaunch signal-desktop"
-
-# Load SSID-specific configs
-include "~/.config/sway/$(iw dev | grep ssid | awk '{print $2}').conf"
 
 # Load systemd integration
 # include /etc/sway/config.d/*
