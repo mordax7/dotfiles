@@ -80,10 +80,9 @@ yay:
   zip:
 
   # ui
-  hyprland:
-  hyprland-autoname-workspaces-git:
+  sway:
   swaylock:
-  waybar-hyprland-git:
+  waybar:
   xorg-server-xwayland:
   wl-clipboard:
   python-i3ipc:
@@ -187,7 +186,7 @@ yay:
   v4l2loopback-dkms:
 
   # media
-  xdg-desktop-portal-hyprland:
+  xdg-desktop-portal-wlr:
   wireplumber:
 
   # kubernetes

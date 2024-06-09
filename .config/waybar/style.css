@@ -29,7 +29,7 @@ window#waybar {
     border-bottom: 3px solid transparent;
 }
 
-#workspaces button.active {
+#workspaces button.focused {
     border-bottom: 3px solid @green;
 }
 
@@ -37,7 +37,7 @@ window#waybar {
     border-bottom: 3px solid @yellow;
 }
 
-#submap {
+#mode {
     border-bottom: 3px solid @red;
 }
 
@@ -60,8 +60,8 @@ window#waybar {
 #disk.critical,
 #memory.critical,
 #cpu.critical,
-#custom-eyes,
 #custom-yubikey,
+#custom-eyes,
 #custom-recording {
     border-top: 3px solid @background;
     border-bottom: 3px solid @red;
@@ -72,11 +72,13 @@ window#waybar {
     border-bottom: 3px solid @green;
 }
 
-#submap,
+#mode,
 #pulseaudio,
 #custom-usbguard,
 #custom-yubikey,
 #custom-eyes,
+#custom-decrypted,
+#custom-security,
 #custom-systemd,
 #custom-todoist,
 #network,
@@ -115,7 +117,7 @@ window#waybar {
 #custom-yubikey,
 #disk,
 #memory,
-#submap,
+#mode,
 #network,
 #pulseaudio {
     color: @foreground;
@@ -123,8 +125,4 @@ window#waybar {
 
 #custom-vpn {
     color: @dim;
-}
-
-#language {
-    color: @foreground;
 }

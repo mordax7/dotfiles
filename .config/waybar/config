@@ -2,8 +2,8 @@
     "layer": "top",
     "height": 25,
     "modules-left": [
-        "hyprland/workspaces",
-        "hyprland/submap"
+        "sway/workspaces",
+        "sway/mode"
     ],
     "modules-right": [
         "custom/progress",
@@ -21,23 +21,15 @@
         "memory",
         "disk",
         "backlight",
-        "hyprland/language",
+        "sway/language",
         "battery",
         "clock"
     ],
 
-    "hyprland/workspaces": {
-         "format": "{name}"
-    },
     "custom/progress": {
         "exec": "waybar-progress",
         "return-type": "json",
         "interval": 1
-    },
-    "custom/eyes": {
-        "exec": "waybar-eyes",
-        "return-type": "json",
-        "on-click": "waybar-eyes done"
     },
     "custom/usbguard": {
         "format-icons": {
@@ -48,6 +40,11 @@
         "return-type": "json",
         "on-click": "waybar-usbguard allow",
         "on-click-right": "waybar-usbguard reject"
+    },
+    "custom/eyes": {
+        "exec": "waybar-eyes",
+        "return-type": "json",
+        "on-click": "waybar-eyes done"
     },
     "custom/yubikey": {
         "exec": "waybar-yubikey",
@@ -125,7 +122,7 @@
         "format": "<span foreground='#928374'>{icon}</span> {percent}%",
         "format-icons": [""]
     },
-    "hyprland/language": {
+    "sway/language": {
         "min-length": 3,
     },
     "battery": {
@@ -139,7 +136,6 @@
     },
     "network": {
         "interval": 2,
-        "interface": "wlan0",
         "format-wifi": "<span foreground='#928374'></span> {essid}",
         "format-ethernet": "<span foreground='#928374'></span> {ifname}",
         "format-linked": "<span foreground='#928374'></span> {ifname}",
