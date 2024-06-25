@@ -1,2 +1,7 @@
 [user]
     email = aljaz.gantar@scandio.de
+    signingkey = 1A9BCA1F9CBD9B38
+
+[commit]
+    gpgsign = true
+
